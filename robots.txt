@@ -1,0 +1,81 @@
+# robots.txt for AliServis.az
+# Sitemap: Ремонт кондиционеров, котлов и стиральных машин в Баку
+# Last updated: 2026-06-06
+
+User-agent: *
+Allow: /
+Allow: /?lang=az
+Allow: /#home
+Allow: /#services
+Allow: /#about
+Allow: /#contact
+Allow: /images/
+Disallow: /?q=
+Disallow: /?s=
+Disallow: /cdn-cgi/
+Disallow: /wp-*
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.webp?*
+Disallow: /admin
+Disallow: /secret
+Disallow: /temp
+
+# Googlebot (Google)
+User-agent: Googlebot
+Allow: /
+Allow: /?lang=az
+Allow: /images/
+Disallow: /?q=
+Disallow: /?s=
+Disallow: /cdn-cgi/
+Crawl-delay: 1
+
+# Yandex (Яндекс)
+User-agent: Yandex
+Allow: /
+Allow: /?lang=az
+Allow: /images/
+Disallow: /?q=
+Disallow: /?s=
+Disallow: /cdn-cgi/
+Host: https://aliservis.az
+Crawl-delay: 0.5
+
+# Bing (Microsoft)
+User-agent: Bingbot
+Allow: /
+Allow: /?lang=az
+Allow: /images/
+Disallow: /?q=
+Disallow: /?s=
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Allow: /images/
+Disallow: /?q=
+Crawl-delay: 2
+
+# Baidu (Çin)
+User-agent: Baiduspider
+Allow: /
+Disallow: /?q=
+Disallow: /?s=
+Crawl-delay: 2
+
+# Genel izin verme kuralları
+User-agent: *
+Sitemap: https://aliservis.az/sitemap.xml
+Sitemap: https://aliservis.az/sitemap-index.xml
+
+# Görüntü tarayıcıları
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: YandexImages
+Allow: /images/
+
+# Site haritası yönlendirmesi
+Sitemap: https://aliservis.az/sitemap.xml
