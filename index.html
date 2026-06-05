@@ -15,6 +15,16 @@
     <meta name="googlebot" content="index, follow">
     <meta name="yandex" content="index, follow">
     <link rel="canonical" href="https://aliservis.az/">
+    <link rel="alternate" hreflang="ru" href="https://aliservis.az/">
+    <link rel="alternate" hreflang="az" href="https://aliservis.az/?lang=az">
+    <link rel="alternate" hreflang="x-default" href="https://aliservis.az/">
+    <meta name="theme-color" content="#0F6FFF">
+    <meta property="og:image" content="https://aliservis.az/images/og-image.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="AliServis.az – Ремонт кондиционеров, котлов и стиральных машин в Баку">
+    <meta name="twitter:image" content="https://aliservis.az/images/og-image.webp">
+    <link rel="preload" href="images/hero-kondisioner.webp" as="image" type="image/webp">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -67,18 +77,20 @@
             "latitude": "40.4093",
             "longitude": "49.8671"
         },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "08:00",
-            "closes": "22:00"
-        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "08:00",
+                "closes": "22:00"
+            }
+        ],
         "areaServed": {
             "@type": "City",
             "name": "Баку"
         },
         "priceRange": "₼₼",
-        "image": "https://aliservis.az/og-image.jpg",
+        "image": "https://aliservis.az/images/og-image.webp",
         "sameAs": [
             "https://facebook.com/aliservis",
             "https://instagram.com/aliservis"
@@ -157,6 +169,27 @@
     }
     </script>
     
+    
+    <!-- WebSite Schema with SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AliServis.az",
+        "url": "https://aliservis.az/",
+        "inLanguage": "ru",
+        "description": "Профессиональный ремонт кондиционеров, котлов и стиральных машин в Баку",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://aliservis.az/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -610,10 +643,50 @@
             100% { transform: translate(30px, -20px) scale(1.05); }
         }
 
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 700px;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            box-shadow: var(--shadow-xl);
+            border: 2px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-img-primary {
+            grid-column: 1 / -1;
+            height: clamp(220px, 32vw, 340px);
+        }
+
+        .hero-img-secondary {
+            height: clamp(140px, 20vw, 200px);
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-sm);
+            object-fit: contain;
         }
 
         .hero-badge {
@@ -738,12 +811,49 @@
         .service-card {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 36px;
+            padding: 0;
             box-shadow: var(--shadow-md);
             transition: var(--transition);
             border: 1px solid var(--gray-100);
             position: relative;
             overflow: hidden;
+        }
+
+        .service-card-body {
+            padding: 28px 32px 32px;
+        }
+
+        .service-card-media img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-card-media--placeholder {
+            height: 220px;
+            background: linear-gradient(135deg, #f0e6ff 0%, #e8f1ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            color: #7c3aed;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .service-card-media--placeholder i {
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+
+        .service-card-media--placeholder span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            max-width: 200px;
+            line-height: 1.4;
         }
 
         .service-card::before {
@@ -1074,66 +1184,88 @@
             color: var(--gray-400);
         }
 
-        /* ===== BEFORE/AFTER SECTION ===== */
-        .before-after {
+        /* ===== WORK GALLERY ===== */
+        .work-gallery {
             background: var(--gray-50);
         }
 
-        .before-after-grid {
+        .work-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
-        .before-after-item {
+        .work-card {
             background: var(--white);
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--gray-100);
         }
 
-        .before-after-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            position: relative;
+        .work-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
         }
 
-        .before-after-images img {
+        .work-card img {
             width: 100%;
-            height: 250px;
+            height: 220px;
             object-fit: cover;
+            display: block;
         }
 
-        .before-after-label {
-            position: absolute;
-            bottom: 12px;
-            padding: 4px 12px;
-            background: rgba(0,0,0,0.7);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .before-after-label.before {
-            left: 12px;
-        }
-
-        .before-after-label.after {
-            right: 12px;
-        }
-
-        .before-after-content {
+        .work-card-content {
             padding: 20px;
         }
 
-        .before-after-content h4 {
-            font-size: 1.1rem;
+        .work-card-content h4 {
+            font-size: 1.05rem;
             color: var(--gray-900);
             margin-bottom: 8px;
         }
 
-        .before-after-content p {
+        .work-card-content p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .masters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            margin-top: 32px;
+        }
+
+        .master-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-100);
+        }
+
+        .master-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .master-card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .master-card-content h4 {
+            font-size: 1.1rem;
+            color: var(--gray-900);
+            margin-bottom: 6px;
+        }
+
+        .master-card-content p {
             color: var(--gray-500);
             font-size: 0.9rem;
         }
@@ -1652,6 +1784,19 @@
                 display: flex;
             }
 
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            #page-services [style*="grid-template-columns:1fr 300px"] {
+                grid-template-columns: 1fr !important;
+            }
+
             .hero-stats {
                 gap: 24px;
             }
@@ -1698,21 +1843,6 @@
                 display: none;
             }
 
-            .before-after-images {
-                grid-template-columns: 1fr;
-            }
-
-            .before-after-label.before {
-                left: 12px;
-                bottom: auto;
-                top: 12px;
-            }
-
-            .before-after-label.after {
-                right: 12px;
-                bottom: auto;
-                top: 12px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1788,32 +1918,30 @@
     <header class="header" id="header" role="banner">
         <div class="header-inner">
             <a href="#" class="logo" aria-label="AliServis.az - Главная">
-                <div class="logo-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
+                <img src="images/logo.webp" alt="AliServis.az" class="logo-img" width="42" height="42" loading="eager">
                 <div class="logo-text">Ali<span>Servis</span>.az</div>
             </a>
 
             <nav class="nav" role="navigation" aria-label="Основная навигация">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active" data-page="home">Главная</a></li>
-                    <li><a href="#services" class="nav-link" data-page="services">Услуги</a></li>
-                    <li><a href="#about" class="nav-link" data-page="about">О нас</a></li>
-                    <li><a href="#contact" class="nav-link" data-page="contact">Контакты</a></li>
+                    <li><a href="#home" class="nav-link active" data-page="home" data-i18n="nav.home">Главная</a></li>
+                    <li><a href="#services" class="nav-link" data-page="services" data-i18n="nav.services">Услуги</a></li>
+                    <li><a href="#about" class="nav-link" data-page="about" data-i18n="nav.about">О нас</a></li>
+                    <li><a href="#contact" class="nav-link" data-page="contact" data-i18n="nav.contact">Контакты</a></li>
                 </ul>
             </nav>
 
             <div style="display:flex;align-items:center;gap:16px;">
-                <div class="lang-switch">
-                    <button class="lang-btn" data-lang="az">AZ</button>
-                    <button class="lang-btn active" data-lang="ru">RU</button>
+                <div class="lang-switch" role="group" aria-label="Выбор языка">
+                    <button type="button" class="lang-btn" data-lang="az" aria-pressed="false" aria-label="Azərbaycan dili">AZ</button>
+                    <button type="button" class="lang-btn active" data-lang="ru" aria-pressed="true" aria-label="Русский язык">RU</button>
                 </div>
                 <a href="tel:+994992445005" class="header-phone">
                     <i class="fas fa-phone"></i>
                     <span>+994 992 44 50 05</span>
                 </a>
                 <a href="tel:+994992445005" class="btn btn-primary header-cta">
-                    <i class="fas fa-phone-volume"></i> Позвонить
+                    <i class="fas fa-phone-volume"></i> <span data-i18n="nav.call">Позвонить</span>
                 </a>
             </div>
 
@@ -1827,12 +1955,12 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#home" class="nav-link active" data-page="home">Главная</a>
-        <a href="#services" class="nav-link" data-page="services">Услуги</a>
-        <a href="#about" class="nav-link" data-page="about">О нас</a>
-        <a href="#contact" class="nav-link" data-page="contact">Контакты</a>
+        <a href="#home" class="nav-link active" data-page="home" data-i18n="nav.home">Главная</a>
+        <a href="#services" class="nav-link" data-page="services" data-i18n="nav.services">Услуги</a>
+        <a href="#about" class="nav-link" data-page="about" data-i18n="nav.about">О нас</a>
+        <a href="#contact" class="nav-link" data-page="contact" data-i18n="nav.contact">Контакты</a>
         <a href="tel:+994992445005" class="btn btn-primary">
-            <i class="fas fa-phone-volume"></i> Позвонить
+            <i class="fas fa-phone-volume"></i> <span data-i18n="nav.call">Позвонить</span>
         </a>
     </div>
 
@@ -1845,36 +1973,41 @@
                     <div class="hero-content">
                         <div class="hero-badge">
                             <i class="fas fa-star"></i>
-                            Надежный сервис в Баку
+                            <span data-i18n="hero.badge">Надёжный сервис в Баку</span>
                         </div>
-                        <h1>AliServis.az – <span>Ремонт кондиционеров, котлов и стиральных машин</span></h1>
-                        <p class="hero-subtitle">Профессиональный сервис в Баку и пригородных районах. Быстрое обслуживание, гарантия на работы, оригинальные запчасти. Обращайтесь к нам для ремонта кондиционеров, котлов и стиральных машин.</p>
+                        <h1 data-i18n="hero.title" data-i18n-html>AliServis.az – <span>Ремонт кондиционеров, котлов и стиральных машин</span></h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">Профессиональный сервис в Баку и пригородных районах. Быстрое обслуживание, гарантия на работы, оригинальные запчасти.</p>
                         <div class="hero-buttons">
                             <a href="#services" class="btn btn-primary" data-page="services">
-                                <i class="fas fa-tools"></i> Наши услуги
+                                <i class="fas fa-tools"></i> <span data-i18n="hero.btn.services">Наши услуги</span>
                             </a>
                             <a href="tel:+994992445005" class="btn btn-outline">
-                                <i class="fas fa-phone"></i> Позвонить сейчас
+                                <i class="fas fa-phone"></i> <span data-i18n="hero.btn.call">Позвонить сейчас</span>
                             </a>
                         </div>
                         <div class="hero-stats">
                             <div class="hero-stat">
                                 <div class="hero-stat-number">5000+</div>
-                                <div class="hero-stat-label">Довольных клиентов</div>
+                                <div class="hero-stat-label" data-i18n="hero.stat.clients">Довольных клиентов</div>
                             </div>
                             <div class="hero-stat">
                                 <div class="hero-stat-number">8+</div>
-                                <div class="hero-stat-label">Лет опыта</div>
+                                <div class="hero-stat-label" data-i18n="hero.stat.experience">Лет опыта</div>
                             </div>
                             <div class="hero-stat">
                                 <div class="hero-stat-number">24/7</div>
-                                <div class="hero-stat-label">Экстренная помощь</div>
+                                <div class="hero-stat-label" data-i18n="hero.stat.emergency">Экстренная помощь</div>
                             </div>
                             <div class="hero-stat">
                                 <div class="hero-stat-number">100%</div>
-                                <div class="hero-stat-label">Гарантия</div>
+                                <div class="hero-stat-label" data-i18n="hero.stat.warranty">Гарантия</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="hero-visual" aria-hidden="true">
+                        <img src="images/hero-kondisioner.webp" alt="Ремонт кондиционеров в Баку" class="hero-img-primary" width="600" height="340" fetchpriority="high">
+                        <img src="images/hero-kombi.webp" alt="Ремонт котлов в Баку" class="hero-img-secondary" width="290" height="200" loading="lazy">
+                        <img src="images/kondisioner-ustasi-baki.webp" alt="Мастер по кондиционерам в Баку" class="hero-img-secondary" width="290" height="200" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -1882,74 +2015,90 @@
             <!-- Ad Space Header -->
             <div class="container">
                 <div class="ad-space ad-space-header">
-                    <span>Google AdSense Рекламное место (728x90)</span>
+                    <span data-i18n="ad.header">Google AdSense Рекламное место (728x90)</span>
                 </div>
             </div>
 
             <!-- Quick Services Preview -->
             <section class="section services" aria-label="Наши услуги">
                 <div class="container">
-                    <h2 class="section-title">Профессиональные сервисные услуги</h2>
-                    <p class="section-subtitle">Надежное и качественное обслуживание ваших кондиционеров, котлов и стиральных машин.</p>
+                    <h2 class="section-title" data-i18n="services.title">Профессиональные сервисные услуги</h2>
+                    <p class="section-subtitle" data-i18n="services.subtitle">Надёжное и качественное обслуживание ваших кондиционеров, котлов и стиральных машин.</p>
                     
                     <div class="services-grid">
                         <!-- Кондиционеры -->
                         <article class="service-card fade-in">
-                            <div class="service-icon blue">
-                                <i class="fas fa-snowflake"></i>
+                            <div class="service-card-media">
+                                <img src="images/kondisioner-temiri-baki.webp" alt="Ремонт кондиционеров в Баку" width="400" height="220" loading="lazy">
                             </div>
-                            <h3>Ремонт и установка кондиционеров</h3>
-                            <p>Профессиональная установка, ремонт, заправка фреоном и техническое обслуживание кондиционеров опытным мастером.</p>
-                            <ul class="service-list">
-                                <li><i class="fas fa-check-circle"></i> Заправка фреоном</li>
-                                <li><i class="fas fa-check-circle"></i> Диагностика и чистка</li>
-                                <li><i class="fas fa-check-circle"></i> Ремонт и установка</li>
-                                <li><i class="fas fa-check-circle"></i> Демонтаж и перенос</li>
-                            </ul>
-                            <div class="service-keywords">
-                                <span>ремонт кондиционеров</span>
-                                <span>мастер по кондиционерам</span>
-                                <span>установка кондиционеров</span>
+                            <div class="service-card-body">
+                                <div class="service-icon blue">
+                                    <i class="fas fa-snowflake"></i>
+                                </div>
+                                <h3 data-i18n="svc.ac.title">Ремонт и установка кондиционеров</h3>
+                                <p data-i18n="svc.ac.desc">Профессиональная установка, ремонт, заправка фреоном и техническое обслуживание кондиционеров опытным мастером.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.l1">Заправка фреоном</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.l2">Диагностика и чистка</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.l3">Ремонт и установка</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.l4">Демонтаж и перенос</span></li>
+                                </ul>
+                                <div class="service-keywords">
+                                    <span>ремонт кондиционеров</span>
+                                    <span>мастер по кондиционерам</span>
+                                    <span>установка кондиционеров</span>
+                                </div>
                             </div>
                         </article>
 
                         <!-- Котлы -->
                         <article class="service-card fade-in">
-                            <div class="service-icon green">
-                                <i class="fas fa-fire"></i>
+                            <div class="service-card-media">
+                                <img src="images/kombi-temiri-baki.webp" alt="Ремонт котлов в Баку" width="400" height="220" loading="lazy">
                             </div>
-                            <h3>Ремонт и обслуживание котлов</h3>
-                            <p>Диагностика, замена запчастей и срочный ремонт котлов опытным мастером.</p>
-                            <ul class="service-list">
-                                <li><i class="fas fa-check-circle"></i> Диагностика</li>
-                                <li><i class="fas fa-check-circle"></i> Замена запчастей</li>
-                                <li><i class="fas fa-check-circle"></i> Срочный ремонт</li>
-                                <li><i class="fas fa-check-circle"></i> Профилактическое обслуживание</li>
-                            </ul>
-                            <div class="service-keywords">
-                                <span>ремонт котлов</span>
-                                <span>сервис котлов</span>
-                                <span>мастер по котлам</span>
+                            <div class="service-card-body">
+                                <div class="service-icon green">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <h3 data-i18n="svc.boiler.title">Ремонт и обслуживание котлов</h3>
+                                <p data-i18n="svc.boiler.desc">Диагностика, замена запчастей и срочный ремонт котлов опытным мастером.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.l1">Диагностика</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.l2">Замена запчастей</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.l3">Срочный ремонт</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.l4">Профилактическое обслуживание</span></li>
+                                </ul>
+                                <div class="service-keywords">
+                                    <span>ремонт котлов</span>
+                                    <span>сервис котлов</span>
+                                    <span>мастер по котлам</span>
+                                </div>
                             </div>
                         </article>
 
-                        <!-- Стиральные машины -->
+                        <!-- Стиральные машины — фото пока нет, пример карточки -->
                         <article class="service-card fade-in">
-                            <div class="service-icon purple">
+                            <div class="service-card-media service-card-media--placeholder">
                                 <i class="fas fa-tshirt"></i>
+                                <span data-i18n="svc.wm.photo.soon">Фото скоро будет добавлено</span>
                             </div>
-                            <h3>Ремонт стиральных машин</h3>
-                            <p>Профессиональный ремонт электронных плат, двигателей и других компонентов стиральных машин.</p>
-                            <ul class="service-list">
-                                <li><i class="fas fa-check-circle"></i> Ремонт электронной платы</li>
-                                <li><i class="fas fa-check-circle"></i> Ремонт двигателя</li>
-                                <li><i class="fas fa-check-circle"></i> Замена насоса</li>
-                                <li><i class="fas fa-check-circle"></i> Полная диагностика</li>
-                            </ul>
-                            <div class="service-keywords">
-                                <span>ремонт стиральных машин</span>
-                                <span>сервис стиральных машин</span>
-                                <span>ремонт бытовой техники</span>
+                            <div class="service-card-body">
+                                <div class="service-icon purple">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+                                <h3 data-i18n="svc.wm.title">Ремонт стиральных машин</h3>
+                                <p data-i18n="svc.wm.desc">Профессиональный ремонт электронных плат, двигателей и других компонентов стиральных машин.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.l1">Ремонт электронной платы</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.l2">Ремонт двигателя</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.l3">Замена насоса</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.l4">Полная диагностика</span></li>
+                                </ul>
+                                <div class="service-keywords">
+                                    <span>ремонт стиральных машин</span>
+                                    <span>сервис стиральных машин</span>
+                                    <span>ремонт бытовой техники</span>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -1959,8 +2108,8 @@
             <!-- Districts Section -->
             <section class="districts" aria-label="Районы обслуживания">
                 <div class="container">
-                    <h2 class="section-title">Обслуживаем все районы Баку</h2>
-                    <p class="section-subtitle">Профессиональные услуги во всех районах Баку и Апшеронского полуострова</p>
+                    <h2 class="section-title" data-i18n="districts.title">Обслуживаем все районы Баку</h2>
+                    <p class="section-subtitle" data-i18n="districts.subtitle">Профессиональные услуги во всех районах Баку и Апшеронского полуострова</p>
                     
                     <div class="districts-grid">
                         <div class="district-card fade-in">
@@ -2022,20 +2171,20 @@
                         <div class="warranty-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h2>6 месяцев официальной гарантии</h2>
-                        <p>На все ремонтные и монтажные работы мы даем 6 месяцев официальной гарантии. Если в течение гарантийного срока возникнет проблема, ремонт будет бесплатным.</p>
+                        <h2 data-i18n="warranty.title">6 месяцев официальной гарантии</h2>
+                        <p data-i18n="warranty.desc">На все ремонтные и монтажные работы мы даём 6 месяцев официальной гарантии. Если в течение гарантийного срока возникнет проблема, ремонт будет бесплатным.</p>
                         <div class="warranty-features">
                             <div class="warranty-feature">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Официальная гарантия</span>
+                                <span data-i18n="warranty.f1">Официальная гарантия</span>
                             </div>
                             <div class="warranty-feature">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Оригинальные запчасти</span>
+                                <span data-i18n="warranty.f2">Оригинальные запчасти</span>
                             </div>
                             <div class="warranty-feature">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Бесплатный повторный сервис</span>
+                                <span data-i18n="warranty.f3">Бесплатный повторный сервис</span>
                             </div>
                         </div>
                     </div>
@@ -2045,8 +2194,8 @@
             <!-- Reviews Section -->
             <section class="section reviews" aria-label="Отзывы клиентов">
                 <div class="container">
-                    <h2 class="section-title">Что говорят наши клиенты?</h2>
-                    <p class="section-subtitle">Отзывы более 5000 довольных клиентов</p>
+                    <h2 class="section-title" data-i18n="reviews.title">Что говорят наши клиенты?</h2>
+                    <p class="section-subtitle" data-i18n="reviews.subtitle">Отзывы более 5000 довольных клиентов</p>
                     
                     <div class="reviews-grid">
                         <div class="review-card fade-in">
@@ -2063,8 +2212,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="review-text">"Обратился для ремонта кондиционера. Очень профессиональный подход, проблема решена за 1 час. Цены очень доступные. Рекомендую!"</p>
-                            <div class="review-date">15 мая 2024</div>
+                            <p class="review-text" data-i18n="reviews.r1.text">«Обратился для ремонта кондиционера. Очень профессиональный подход, проблема решена за 1 час. Цены очень доступные. Рекомендую!»</p>
+                            <div class="review-date" data-i18n="reviews.r1.date">15 мая 2024</div>
                         </div>
 
                         <div class="review-card fade-in">
@@ -2081,8 +2230,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="review-text">"Вызвали мастера для ремонта котла. Мастер приехал вовремя, быстро нашел проблему и отремонтировал. Дали 6 месяцев гарантии. Очень довольна."</p>
-                            <div class="review-date">3 июня 2024</div>
+                            <p class="review-text" data-i18n="reviews.r2.text">«Вызвали мастера для ремонта котла. Мастер приехал вовремя, быстро нашёл проблему и отремонтировал. Дали 6 месяцев гарантии. Очень довольна.»</p>
+                            <div class="review-date" data-i18n="reviews.r2.date">3 июня 2024</div>
                         </div>
 
                         <div class="review-card fade-in">
@@ -2099,118 +2248,117 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="review-text">"Стиральная машина не работала. Отремонтировали электронную плату. Вышло намного дешевле, чем покупать новую плату. Спасибо!"</p>
-                            <div class="review-date">28 мая 2024</div>
+                            <p class="review-text" data-i18n="reviews.r3.text">«Стиральная машина не работала. Отремонтировали электронную плату. Вышло намного дешевле, чем покупать новую плату. Спасибо!»</p>
+                            <div class="review-date" data-i18n="reviews.r3.date">28 мая 2024</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Before/After Section -->
-            <section class="section before-after" aria-label="До и после">
+            <!-- Work Gallery -->
+            <section class="section work-gallery" aria-label="Примеры работ">
                 <div class="container">
-                    <h2 class="section-title">До и после ремонта</h2>
-                    <p class="section-subtitle">Примеры отремонтированных нами устройств</p>
+                    <h2 class="section-title" data-i18n="work.title">Примеры наших работ</h2>
+                    <p class="section-subtitle" data-i18n="work.subtitle">Реальные фото ремонта кондиционеров и котлов в Баку</p>
                     
-                    <div class="before-after-grid">
-                        <div class="before-after-item fade-in">
-                            <div class="before-after-images">
-                                <div style="position:relative;">
-                                    <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=До" alt="Кондиционер до ремонта" loading="lazy">
-                                    <span class="before-after-label before">До</span>
-                                </div>
-                                <div style="position:relative;">
-                                    <img src="https://via.placeholder.com/400x250/22c55e/ffffff?text=После" alt="Кондиционер после ремонта" loading="lazy">
-                                    <span class="before-after-label after">После</span>
-                                </div>
+                    <div class="work-gallery-grid">
+                        <article class="work-card fade-in">
+                            <img src="images/kondisioner-qaz-baki.webp" alt="Заправка кондиционера фреоном в Баку" width="400" height="220" loading="lazy">
+                            <div class="work-card-content">
+                                <h4 data-i18n="work.1.title">Заправка кондиционера фреоном</h4>
+                                <p data-i18n="work.1.desc">Диагностика и заправка фреоном в Баку — кондиционер снова эффективно охлаждает.</p>
                             </div>
-                            <div class="before-after-content">
-                                <h4>Чистка и заправка кондиционера</h4>
-                                <p>Кондиционер не охлаждал, выполнена полная чистка и заправка фреоном.</p>
+                        </article>
+                        <article class="work-card fade-in">
+                            <img src="images/kondisioner-temir.webp" alt="Ремонт кондиционера" width="400" height="220" loading="lazy">
+                            <div class="work-card-content">
+                                <h4 data-i18n="work.2.title">Ремонт кондиционера</h4>
+                                <p data-i18n="work.2.desc">Полная диагностика и устранение неисправностей сплит-системы.</p>
                             </div>
-                        </div>
-
-                        <div class="before-after-item fade-in">
-                            <div class="before-after-images">
-                                <div style="position:relative;">
-                                    <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=До" alt="Котел до ремонта" loading="lazy">
-                                    <span class="before-after-label before">До</span>
-                                </div>
-                                <div style="position:relative;">
-                                    <img src="https://via.placeholder.com/400x250/22c55e/ffffff?text=После" alt="Котел после ремонта" loading="lazy">
-                                    <span class="before-after-label after">После</span>
-                                </div>
+                        </article>
+                        <article class="work-card fade-in">
+                            <img src="images/kombi-temir.webp" alt="Ремонт котла" width="400" height="220" loading="lazy">
+                            <div class="work-card-content">
+                                <h4 data-i18n="work.3.title">Ремонт котла</h4>
+                                <p data-i18n="work.3.desc">Срочный ремонт и замена неисправных компонентов котельной системы.</p>
                             </div>
-                            <div class="before-after-content">
-                                <h4>Ремонт котла</h4>
-                                <p>Котел не работал, заменен насос и проведена полная диагностика.</p>
+                        </article>
+                        <article class="work-card fade-in">
+                            <img src="images/kombi-qurasdirma-baki.webp" alt="Установка котла в Баку" width="400" height="220" loading="lazy">
+                            <div class="work-card-content">
+                                <h4 data-i18n="work.4.title">Установка котла</h4>
+                                <p data-i18n="work.4.desc">Профессиональный монтаж и подключение котла в Баку.</p>
                             </div>
-                        </div>
+                        </article>
+                        <article class="work-card fade-in">
+                            <img src="images/kondisioner-qaz.webp" alt="Сервис кондиционера" width="400" height="220" loading="lazy">
+                            <div class="work-card-content">
+                                <h4 data-i18n="work.5.title">Сервис кондиционера</h4>
+                                <p data-i18n="work.5.desc">Техническое обслуживание и проверка системы охлаждения.</p>
+                            </div>
+                        </article>
+                        <article class="work-card fade-in">
+                            <img src="images/kombi-qurasdirma.webp" alt="Монтаж котельного оборудования" width="400" height="220" loading="lazy">
+                            <div class="work-card-content">
+                                <h4 data-i18n="work.6.title">Монтаж котельного оборудования</h4>
+                                <p data-i18n="work.6.desc">Качественная установка и настройка отопительного оборудования.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <!-- Partners Section -->
-            <section class="partners" aria-label="Партнеры">
+            <!-- Masters Section -->
+            <section class="partners" aria-label="Наши мастера">
                 <div class="container">
-                    <h2 class="section-title">Бренды, с которыми мы работаем</h2>
-                    <p class="section-subtitle">Обслуживаем все популярные бренды</p>
+                    <h2 class="section-title" data-i18n="masters.title">Профессиональные мастера</h2>
+                    <p class="section-subtitle" data-i18n="masters.subtitle">Опытные специалисты по кондиционерам и котлам в Баку</p>
                     
-                    <div class="partners-grid">
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=LG" alt="LG" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Samsung" alt="Samsung" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Bosch" alt="Bosch" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Daikin" alt="Daikin" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Electrolux" alt="Electrolux" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Ariston" alt="Ariston" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Whirlpool" alt="Whirlpool" loading="lazy">
-                        </div>
-                        <div class="partner-logo fade-in">
-                            <img src="https://via.placeholder.com/120x80/0F6FFF/ffffff?text=Panasonic" alt="Panasonic" loading="lazy">
-                        </div>
+                    <div class="masters-grid">
+                        <article class="master-card fade-in">
+                            <img src="images/kondisioner-ustasi-baki.webp" alt="Мастер по кондиционерам в Баку" width="400" height="280" loading="lazy">
+                            <div class="master-card-content">
+                                <h4 data-i18n="masters.ac.title">Мастер по кондиционерам</h4>
+                                <p data-i18n="masters.ac.desc">Установка, ремонт и заправка кондиционеров всех марок</p>
+                            </div>
+                        </article>
+                        <article class="master-card fade-in">
+                            <img src="images/kombi-ustasi-baki.webp" alt="Мастер по котлам в Баку" width="400" height="280" loading="lazy">
+                            <div class="master-card-content">
+                                <h4 data-i18n="masters.boiler.title">Мастер по котлам</h4>
+                                <p data-i18n="masters.boiler.desc">Диагностика, ремонт и обслуживание котлов и отопительных систем</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <!-- Certificates Section -->
-            <section class="section certificates" aria-label="Сертификаты">
+            <!-- Work Examples (extra photos) -->
+            <section class="section certificates" aria-label="Дополнительные фото работ">
                 <div class="container">
-                    <h2 class="section-title">Наши сертификаты</h2>
-                    <p class="section-subtitle">Профессиональная команда и наши сертификаты</p>
+                    <h2 class="section-title" data-i18n="cert.title">Наши работы</h2>
+                    <p class="section-subtitle" data-i18n="cert.subtitle">Фото выполненных заказов в Баку</p>
                     
                     <div class="certificates-grid">
                         <div class="certificate-card fade-in">
-                            <img src="https://via.placeholder.com/400x300/0F6FFF/ffffff?text=Сертификат+1" alt="Сертификат сервисного центра" loading="lazy">
+                            <img src="images/kondisioner-temiri-baki.webp" alt="Ремонт кондиционера в Баку" width="400" height="200" loading="lazy">
                             <div class="certificate-content">
-                                <h4>Сертификат сервисного центра</h4>
-                                <p>Официальное обучение и сертификат</p>
+                                <h4 data-i18n="cert.1.title">Ремонт кондиционера в Баку</h4>
+                                <p data-i18n="cert.1.desc">Профессиональный сервис сплит-систем</p>
                             </div>
                         </div>
                         <div class="certificate-card fade-in">
-                            <img src="https://via.placeholder.com/400x300/00A86B/ffffff?text=Сертификат+2" alt="Сертификат мастера" loading="lazy">
+                            <img src="images/kombi-temiri-baki.webp" alt="Ремонт котла в Баку" width="400" height="200" loading="lazy">
                             <div class="certificate-content">
-                                <h4>Сертификат профессионального мастера</h4>
-                                <p>Соответствует международным стандартам</p>
+                                <h4 data-i18n="cert.2.title">Ремонт котла в Баку</h4>
+                                <p data-i18n="cert.2.desc">Срочный выезд и гарантия на работы</p>
                             </div>
                         </div>
                         <div class="certificate-card fade-in">
-                            <img src="https://via.placeholder.com/400x300/7c3aed/ffffff?text=Сертификат+3" alt="Сертификат качества" loading="lazy">
+                            <img src="images/hero-kombi.webp" alt="Сервис котлов" width="400" height="200" loading="lazy">
                             <div class="certificate-content">
-                                <h4>Сертификат качества</h4>
-                                <p>Стандарты ISO 9001</p>
+                                <h4 data-i18n="cert.3.title">Сервис котлов</h4>
+                                <p data-i18n="cert.3.desc">Обслуживание и профилактика отопительных систем</p>
                             </div>
                         </div>
                     </div>
@@ -2222,17 +2370,17 @@
                 <div class="container">
                     <div class="about-grid">
                         <div class="about-content fade-in">
-                            <h2>Почему AliServis.az?</h2>
-                            <p>AliServis.az – профессиональная сервисная компания по обслуживанию бытовой техники в Баку и пригородных районах. Более 8 лет опыта, тысячи довольных клиентов.</p>
-                            <p>Наша главная цель – обеспечить максимальное удовлетворение клиентов, предоставить качественный ремонт с гарантией и оригинальными запчастями.</p>
+                            <h2 data-i18n="about.preview.title">Почему AliServis.az?</h2>
+                            <p data-i18n="about.preview.p1">AliServis.az – профессиональная сервисная компания по обслуживанию бытовой техники в Баку и пригородных районах. Более 8 лет опыта, тысячи довольных клиентов.</p>
+                            <p data-i18n="about.preview.p2">Наша главная цель – обеспечить максимальное удовлетворение клиентов, предоставить качественный ремонт с гарантией и оригинальными запчастями.</p>
                             <div class="about-features">
                                 <div class="about-feature">
                                     <div class="about-feature-icon">
                                         <i class="fas fa-user-cog"></i>
                                     </div>
                                     <div>
-                                        <h4>Профессиональные мастера</h4>
-                                        <p>Опытные специалисты</p>
+                                        <h4 data-i18n="about.f1.title">Профессиональные мастера</h4>
+                                        <p data-i18n="about.f1.desc">Опытные специалисты</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2240,8 +2388,8 @@
                                         <i class="fas fa-bolt"></i>
                                     </div>
                                     <div>
-                                        <h4>Оперативный сервис</h4>
-                                        <p>Быстрая реакция</p>
+                                        <h4 data-i18n="about.f2.title">Оперативный сервис</h4>
+                                        <p data-i18n="about.f2.desc">Быстрая реакция</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2249,8 +2397,8 @@
                                         <i class="fas fa-shield-alt"></i>
                                     </div>
                                     <div>
-                                        <h4>Гарантия на ремонт</h4>
-                                        <p>Официальная гарантия</p>
+                                        <h4 data-i18n="about.f3.title">Гарантия на ремонт</h4>
+                                        <p data-i18n="about.f3.desc">Официальная гарантия</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2258,30 +2406,32 @@
                                         <i class="fas fa-cogs"></i>
                                     </div>
                                     <div>
-                                        <h4>Оригинальные запчасти</h4>
-                                        <p>Качественные запчасти</p>
+                                        <h4 data-i18n="about.f4.title">Оригинальные запчасти</h4>
+                                        <p data-i18n="about.f4.desc">Качественные запчасти</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="about-image fade-in">
-                            <div class="about-image-card">
-                                <i class="fas fa-award"></i>
-                                <h3>8+ лет опыта</h3>
-                                <p>Надежный и профессиональный сервис</p>
+                            <div class="about-image-card" style="padding:0;overflow:hidden;">
+                                <img src="images/hero-kondisioner.webp" alt="AliServis.az — сервис в Баку" width="500" height="360" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block;">
+                                <div style="padding:24px;">
+                                    <h3 data-i18n="about.card.title">8+ лет опыта</h3>
+                                    <p data-i18n="about.card.desc">Надёжный и профессиональный сервис</p>
+                                </div>
                             </div>
                             <div class="about-floating-card top-right">
                                 <i class="fas fa-check-circle"></i>
                                 <div>
                                     <div class="number">5000+</div>
-                                    <div class="label">Клиентов</div>
+                                    <div class="label" data-i18n="about.card.clients">Клиентов</div>
                                 </div>
                             </div>
                             <div class="about-floating-card bottom-left">
                                 <i class="fas fa-star"></i>
                                 <div>
                                     <div class="number">4.9/5</div>
-                                    <div class="label">Рейтинг</div>
+                                    <div class="label" data-i18n="about.card.rating">Рейтинг</div>
                                 </div>
                             </div>
                         </div>
@@ -2292,7 +2442,7 @@
             <!-- Ad Space Footer -->
             <div class="container">
                 <div class="ad-space ad-space-footer">
-                    <span>Google AdSense Рекламное место (728x90)</span>
+                    <span data-i18n="ad.footer">Google AdSense Рекламное место (728x90)</span>
                 </div>
             </div>
         </div>
@@ -2301,25 +2451,29 @@
         <div class="page-section" id="page-services">
             <section class="section" style="padding-top:120px;" aria-label="Услуги">
                 <div class="container">
-                    <h2 class="section-title">Наши услуги</h2>
-                    <p class="section-subtitle">Профессиональный сервис и ремонт всех видов бытовой техники.</p>
+                    <h2 class="section-title" data-i18n="page.services.title">Наши услуги</h2>
+                    <p class="section-subtitle" data-i18n="page.services.subtitle">Профессиональный сервис и ремонт всех видов бытовой техники.</p>
 
                     <div style="display:grid;grid-template-columns:1fr 300px;gap:30px;">
                         <div>
                             <!-- Кондиционеры Detail -->
                             <article class="service-card fade-in" style="margin-bottom:30px;">
+                                <div class="service-card-media">
+                                    <img src="images/kondisioner-temiri-baki.webp" alt="Ремонт кондиционеров в Баку" width="800" height="220" loading="lazy">
+                                </div>
+                                <div class="service-card-body">
                                 <div class="service-icon blue">
                                     <i class="fas fa-snowflake"></i>
                                 </div>
-                                <h3>Ремонт и установка кондиционеров</h3>
-                                <p>Команда AliServis.az профессионально выполняет установку, ремонт, техническое обслуживание и заправку фреоном кондиционеров всех марок и моделей. Наши мастера по кондиционерам имеют многолетний опыт.</p>
+                                <h3 data-i18n="svc.ac.title">Ремонт и установка кондиционеров</h3>
+                                <p data-i18n="svc.ac.detail.desc">Команда AliServis.az профессионально выполняет установку, ремонт, техническое обслуживание и заправку фреоном кондиционеров всех марок и моделей. Наши мастера по кондиционерам имеют многолетний опыт.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i> <strong>Заправка фреоном</strong> – Если ваш кондиционер плохо охлаждает, проверяется уровень фреона и при необходимости заполняется.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Диагностика</strong> – Полная техническая проверка и выявление неисправностей.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Чистка</strong> – Глубокая чистка фильтров и внутренних компонентов.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Ремонт</strong> – Ремонт кондиционеров любой сложности.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Установка</strong> – Профессиональная установка сплит-систем.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Демонтаж</strong> – Безопасный демонтаж и перенос в другое место.</li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.detail.l1" data-i18n-html><strong>Заправка фреоном</strong> – Если ваш кондиционер плохо охлаждает, проверяется уровень фреона и при необходимости заполняется.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.detail.l2" data-i18n-html><strong>Диагностика</strong> – Полная техническая проверка и выявление неисправностей.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.detail.l3" data-i18n-html><strong>Чистка</strong> – Глубокая чистка фильтров и внутренних компонентов.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.detail.l4" data-i18n-html><strong>Ремонт</strong> – Ремонт кондиционеров любой сложности.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.detail.l5" data-i18n-html><strong>Установка</strong> – Профессиональная установка сплит-систем.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.ac.detail.l6" data-i18n-html><strong>Демонтаж</strong> – Безопасный демонтаж и перенос в другое место.</span></li>
                                 </ul>
                                 <div class="service-keywords">
                                     <span>ремонт кондиционеров</span>
@@ -2329,20 +2483,25 @@
                                     <span>кондиционер сервис</span>
                                     <span>кондиционер ustası</span>
                                 </div>
+                                </div>
                             </article>
 
                             <!-- Котлы Detail -->
                             <article class="service-card fade-in" style="margin-bottom:30px;">
+                                <div class="service-card-media">
+                                    <img src="images/kombi-temiri-baki.webp" alt="Ремонт котлов в Баку" width="800" height="220" loading="lazy">
+                                </div>
+                                <div class="service-card-body">
                                 <div class="service-icon green">
                                     <i class="fas fa-fire"></i>
                                 </div>
-                                <h3>Ремонт и обслуживание котлов</h3>
-                                <p>Для эффективной работы котельных систем необходимо регулярное техническое обслуживание. Команда мастеров по котлам AliServis.az выполняет диагностику, ремонт и профилактическое обслуживание котлов всех марок.</p>
+                                <h3 data-i18n="svc.boiler.title">Ремонт и обслуживание котлов</h3>
+                                <p data-i18n="svc.boiler.detail.desc">Для эффективной работы котельных систем необходимо регулярное техническое обслуживание. Команда мастеров по котлам AliServis.az выполняет диагностику, ремонт и профилактическое обслуживание котлов всех марок.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i> <strong>Диагностика</strong> – Точное определение проблем в котельной системе.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Замена запчастей</strong> – Замена на оригинальные запчасти.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Срочный ремонт</strong> – Быстрая реакция и срочный ремонт котлов в зимние месяцы.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Профилактическое обслуживание</strong> – Сезонное техническое обслуживание и чистка.</li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.detail.l1" data-i18n-html><strong>Диагностика</strong> – Точное определение проблем в котельной системе.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.detail.l2" data-i18n-html><strong>Замена запчастей</strong> – Замена на оригинальные запчасти.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.detail.l3" data-i18n-html><strong>Срочный ремонт</strong> – Быстрая реакция и срочный ремонт котлов в зимние месяцы.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.boiler.detail.l4" data-i18n-html><strong>Профилактическое обслуживание</strong> – Сезонное техническое обслуживание и чистка.</span></li>
                                 </ul>
                                 <div class="service-keywords">
                                     <span>ремонт котлов</span>
@@ -2351,20 +2510,26 @@
                                     <span>обслуживание котлов</span>
                                     <span>ремонт котлов баку</span>
                                 </div>
+                                </div>
                             </article>
 
                             <!-- Стиральные машины Detail -->
                             <article class="service-card fade-in" style="margin-bottom:30px;">
+                                <div class="service-card-media service-card-media--placeholder">
+                                    <i class="fas fa-tshirt"></i>
+                                    <span data-i18n="svc.wm.photo.soon">Фото скоро будет добавлено</span>
+                                </div>
+                                <div class="service-card-body">
                                 <div class="service-icon purple">
                                     <i class="fas fa-tshirt"></i>
                                 </div>
-                                <h3>Ремонт стиральных машин</h3>
-                                <p>Мы предоставляем профессиональный сервис по ремонту стиральных машин при любых неисправностях. От ремонта электронной платы до замены двигателя – выполняем все виды работ.</p>
+                                <h3 data-i18n="svc.wm.title">Ремонт стиральных машин</h3>
+                                <p data-i18n="svc.wm.detail.desc">Мы предоставляем профессиональный сервис по ремонту стиральных машин при любых неисправностях. От ремонта электронной платы до замены двигателя – выполняем все виды работ.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i> <strong>Ремонт электронной платы</strong> – Ремонт панели управления и электроники.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Ремонт двигателя</strong> – Устранение неисправностей мотора.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Замена насоса</strong> – Проверка и замена водяного насоса.</li>
-                                    <li><i class="fas fa-check-circle"></i> <strong>Полная диагностика</strong> – Полная техническая проверка и отчет.</li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.detail.l1" data-i18n-html><strong>Ремонт электронной платы</strong> – Ремонт панели управления и электроники.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.detail.l2" data-i18n-html><strong>Ремонт двигателя</strong> – Устранение неисправностей мотора.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.detail.l3" data-i18n-html><strong>Замена насоса</strong> – Проверка и замена водяного насоса.</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-i18n="svc.wm.detail.l4" data-i18n-html><strong>Полная диагностика</strong> – Полная техническая проверка и отчёт.</span></li>
                                 </ul>
                                 <div class="service-keywords">
                                     <span>ремонт стиральных машин</span>
@@ -2372,20 +2537,26 @@
                                     <span>стиральная машина ремонт</span>
                                     <span>ремонт бытовой техники</span>
                                 </div>
+                                </div>
                             </article>
 
                             <!-- Бытовая техника General -->
                             <article class="service-card fade-in">
+                                <div class="service-card-media">
+                                    <img src="images/kombi-temir.webp" alt="Ремонт бытовой техники" width="800" height="220" loading="lazy">
+                                </div>
+                                <div class="service-card-body">
                                 <div class="service-icon blue">
                                     <i class="fas fa-wrench"></i>
                                 </div>
-                                <h3>Ремонт бытовой техники</h3>
-                                <p>AliServis.az предлагает ремонт и сервисное обслуживание всех видов бытовой техники. Вы можете обратиться к нам для ремонта посудомоечных машин, плит, холодильников и другой бытовой техники.</p>
+                                <h3 data-i18n="svc.general.title">Ремонт бытовой техники</h3>
+                                <p data-i18n="svc.general.desc">AliServis.az предлагает ремонт и сервисное обслуживание всех видов бытовой техники.</p>
                                 <div class="service-keywords">
                                     <span>ремонт бытовой техники</span>
                                     <span>сервис бытовой техники</span>
                                     <span>ремонт холодильников</span>
                                     <span>ремонт посудомоечных машин</span>
+                                </div>
                                 </div>
                             </article>
                         </div>
@@ -2393,18 +2564,18 @@
                         <!-- Sidebar -->
                         <aside>
                             <div class="ad-space ad-space-sidebar">
-                                <span>Yandex Direct Рекламное место (300x250)</span>
+                                <span data-i18n="ad.sidebar">Yandex Direct Рекламное место (300x250)</span>
                             </div>
                             <div style="background:var(--primary);color:var(--white);border-radius:var(--radius-lg);padding:28px;margin-top:20px;text-align:center;">
                                 <i class="fas fa-phone-volume" style="font-size:2rem;margin-bottom:12px;"></i>
-                                <h3 style="font-size:1.1rem;margin-bottom:8px;">Бесплатная консультация</h3>
-                                <p style="font-size:0.9rem;opacity:0.9;margin-bottom:16px;">Есть вопросы о сервисных услугах?</p>
+                                <h3 style="font-size:1.1rem;margin-bottom:8px;" data-i18n="page.services.consult">Бесплатная консультация</h3>
+                                <p style="font-size:0.9rem;opacity:0.9;margin-bottom:16px;" data-i18n="page.services.consult.desc">Есть вопросы о сервисных услугах?</p>
                                 <a href="tel:+994992445005" class="btn btn-secondary" style="width:100%;justify-content:center;">
-                                    <i class="fas fa-phone"></i> Позвонить
+                                    <i class="fas fa-phone"></i> <span data-i18n="nav.call">Позвонить</span>
                                 </a>
                             </div>
                             <div class="ad-space ad-space-sidebar" style="margin-top:20px;">
-                                <span>Google AdSense Рекламное место (300x250)</span>
+                                <span data-i18n="ad.sidebar2">Google AdSense Рекламное место (300x250)</span>
                             </div>
                         </aside>
                     </div>
@@ -2416,25 +2587,25 @@
         <div class="page-section" id="page-about">
             <section class="section" style="padding-top:120px;" aria-label="О нас">
                 <div class="container">
-                    <h2 class="section-title">О компании AliServis.az</h2>
-                    <p class="section-subtitle">Надежная сервисная компания по обслуживанию бытовой техники в Баку</p>
+                    <h2 class="section-title" data-i18n="page.about.title">О компании AliServis.az</h2>
+                    <p class="section-subtitle" data-i18n="page.about.subtitle">Надёжная сервисная компания по обслуживанию бытовой техники в Баку</p>
 
                     <div class="about-grid">
                         <div class="about-content fade-in">
-                            <h2>Кто мы?</h2>
-                            <p><strong>AliServis.az</strong> – ведущая сервисная компания по обслуживанию бытовой техники в Баку и пригородных районах. Мы работаем с 2016 года и за это время обслужили тысячи клиентов.</p>
-                            <p>Наша компания специализируется на ремонте кондиционеров, котлов, стиральных машин и другом сервисном обслуживании бытовой техники. Команда наших профессиональных мастеров работает с современным оборудованием и оригинальными запчастями.</p>
-                            <p>Наша философия проста: <strong>удовлетворенность клиентов превыше всего.</strong> Мы предлагаем индивидуальный подход к каждому клиенту, прозрачное ценообразование и гарантийный ремонт.</p>
+                            <h2 data-i18n="page.about.who">Кто мы?</h2>
+                            <p data-i18n="page.about.p1" data-i18n-html><strong>AliServis.az</strong> – ведущая сервисная компания по обслуживанию бытовой техники в Баку и пригородных районах. Мы работаем с 2016 года и за это время обслужили тысячи клиентов.</p>
+                            <p data-i18n="page.about.p2">Наша компания специализируется на ремонте кондиционеров, котлов, стиральных машин и другом сервисном обслуживании бытовой техники.</p>
+                            <p data-i18n="page.about.p3" data-i18n-html>Наша философия проста: <strong>удовлетворённость клиентов превыше всего.</strong></p>
                             
-                            <h3 style="margin-top:32px;margin-bottom:16px;color:var(--gray-900);">Почему выбирают нас?</h3>
+                            <h3 style="margin-top:32px;margin-bottom:16px;color:var(--gray-900);" data-i18n="page.about.why">Почему выбирают нас?</h3>
                             <div class="about-features">
                                 <div class="about-feature">
                                     <div class="about-feature-icon">
                                         <i class="fas fa-user-cog"></i>
                                     </div>
                                     <div>
-                                        <h4>Профессиональные мастера</h4>
-                                        <p>Сертифицированная и опытная команда специалистов</p>
+                                        <h4 data-i18n="about.f1.title">Профессиональные мастера</h4>
+                                        <p data-i18n="about.page.f1.desc">Сертифицированная и опытная команда специалистов</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2442,8 +2613,8 @@
                                         <i class="fas fa-bolt"></i>
                                     </div>
                                     <div>
-                                        <h4>Оперативный сервис</h4>
-                                        <p>Выезд мастера в течение 1 часа после заказа</p>
+                                        <h4 data-i18n="about.f2.title">Оперативный сервис</h4>
+                                        <p data-i18n="about.page.f2.desc">Выезд мастера в течение 1 часа после заказа</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2451,8 +2622,8 @@
                                         <i class="fas fa-shield-alt"></i>
                                     </div>
                                     <div>
-                                        <h4>Гарантия на ремонт</h4>
-                                        <p>6 месяцев гарантии на все виды работ</p>
+                                        <h4 data-i18n="about.f3.title">Гарантия на ремонт</h4>
+                                        <p data-i18n="about.page.f3.desc">6 месяцев гарантии на все виды работ</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2460,8 +2631,8 @@
                                         <i class="fas fa-cogs"></i>
                                     </div>
                                     <div>
-                                        <h4>Оригинальные запчасти</h4>
-                                        <p>Используем только оригинальные запчасти</p>
+                                        <h4 data-i18n="about.f4.title">Оригинальные запчасти</h4>
+                                        <p data-i18n="about.page.f4.desc">Используем только оригинальные запчасти</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2469,8 +2640,8 @@
                                         <i class="fas fa-hand-holding-usd"></i>
                                     </div>
                                     <div>
-                                        <h4>Доступные цены</h4>
-                                        <p>Самые доступные цены на рынке</p>
+                                        <h4 data-i18n="page.about.f5.title">Доступные цены</h4>
+                                        <p data-i18n="page.about.f5.desc">Самые доступные цены на рынке</p>
                                     </div>
                                 </div>
                                 <div class="about-feature">
@@ -2478,8 +2649,8 @@
                                         <i class="fas fa-headset"></i>
                                     </div>
                                     <div>
-                                        <h4>Поддержка 24/7</h4>
-                                        <p>Связь с нами в любое время, каждый день</p>
+                                        <h4 data-i18n="page.about.f6.title">Поддержка 24/7</h4>
+                                        <p data-i18n="page.about.f6.desc">Связь с нами в любое время, каждый день</p>
                                     </div>
                                 </div>
                             </div>
@@ -2488,20 +2659,20 @@
                             <div class="about-image-card">
                                 <i class="fas fa-building"></i>
                                 <h3>AliServis.az</h3>
-                                <p>На службе с 2016 года</p>
+                                <p data-i18n="page.about.card.desc">На службе с 2016 года</p>
                             </div>
                             <div class="about-floating-card top-right">
                                 <i class="fas fa-users"></i>
                                 <div>
                                     <div class="number">15+</div>
-                                    <div class="label">Мастеров</div>
+                                    <div class="label" data-i18n="page.about.masters">Мастеров</div>
                                 </div>
                             </div>
                             <div class="about-floating-card bottom-left">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <div class="number">Баку</div>
-                                    <div class="label">и пригороды</div>
+                                    <div class="label" data-i18n="page.about.location">и пригороды</div>
                                 </div>
                             </div>
                         </div>
@@ -2514,13 +2685,13 @@
         <div class="page-section" id="page-contact">
             <section class="section contact" style="padding-top:120px;" aria-label="Контакты">
                 <div class="container">
-                    <h2 class="section-title">Свяжитесь с нами</h2>
-                    <p class="section-subtitle">Есть вопросы? Свяжитесь с нами, мы будем рады помочь вам.</p>
+                    <h2 class="section-title" data-i18n="contact.title">Свяжитесь с нами</h2>
+                    <p class="section-subtitle" data-i18n="contact.subtitle">Есть вопросы? Свяжитесь с нами, мы будем рады помочь вам.</p>
 
                     <div class="contact-grid">
                         <div class="contact-info">
                             <div class="contact-info-card">
-                                <h3>Контактная информация</h3>
+                                <h3 data-i18n="contact.info">Контактная информация</h3>
                                 <div class="contact-item">
                                     <div class="contact-item-icon">
                                         <i class="fas fa-phone"></i>
@@ -2555,13 +2726,13 @@
                                 </div>
                             </div>
                             <div class="contact-info-card">
-                                <h3>Часы работы</h3>
+                                <h3 data-i18n="contact.hours">Часы работы</h3>
                                 <div class="contact-item">
                                     <div class="contact-item-icon">
                                         <i class="fas fa-clock"></i>
                                     </div>
                                     <div class="contact-item-text">
-                                        Понедельник – Воскресенье: 08:00 – 22:00
+                                        <span data-i18n="contact.hours.week">Понедельник – Воскресенье: 08:00 – 22:00</span>
                                     </div>
                                 </div>
                                 <div class="contact-item">
@@ -2569,7 +2740,7 @@
                                         <i class="fas fa-exclamation-circle"></i>
                                     </div>
                                     <div class="contact-item-text">
-                                        Экстренная служба: доступна 24/7
+                                        <span data-i18n="contact.hours.emergency">Экстренная служба: доступна 24/7</span>
                                     </div>
                                 </div>
                             </div>
@@ -2586,33 +2757,33 @@
                             </div>
                             
                             <div class="ad-space" style="min-height:120px;margin-top:20px;">
-                                <span>Yandex Direct Рекламное место</span>
+                                <span data-i18n="ad.contact">Yandex Direct Рекламное место</span>
                             </div>
                         </div>
 
                         <div class="contact-form-wrapper">
-                            <h3>Отправьте нам сообщение</h3>
+                            <h3 data-i18n="contact.form.title">Отправьте нам сообщение</h3>
                             <form id="contactForm" novalidate>
                                 <div class="form-group">
-                                    <label for="name">Ваше имя *</label>
-                                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-                                    <div class="form-error" id="nameError">Пожалуйста, введите ваше имя</div>
+                                    <label for="name" data-i18n="contact.form.name">Ваше имя *</label>
+                                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" data-i18n-placeholder="contact.form.name.ph" required>
+                                    <div class="form-error" id="nameError" data-i18n="contact.form.name.error">Пожалуйста, введите ваше имя</div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Телефон *</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+994 XX XXX XX XX" required>
-                                    <div class="form-error" id="phoneError">Введите корректный номер телефона</div>
+                                    <label for="phone" data-i18n="contact.form.phone">Телефон *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+994 XX XXX XX XX" data-i18n-placeholder="contact.form.phone.ph" required>
+                                    <div class="form-error" id="phoneError" data-i18n="contact.form.phone.error">Введите корректный номер телефона</div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="message">Ваше сообщение</label>
-                                    <textarea id="message" name="message" placeholder="Кратко опишите услугу..."></textarea>
+                                    <label for="message" data-i18n="contact.form.message">Ваше сообщение</label>
+                                    <textarea id="message" name="message" placeholder="Кратко опишите услугу..." data-i18n-placeholder="contact.form.message.ph"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-                                    <i class="fas fa-paper-plane"></i> Отправить
+                                    <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.submit">Отправить</span>
                                 </button>
                             </form>
                             <div class="form-success" id="formSuccess">
-                                <i class="fas fa-check-circle"></i> Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+                                <i class="fas fa-check-circle"></i> <span data-i18n="contact.form.success">Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.</span>
                             </div>
                         </div>
                     </div>
@@ -2627,7 +2798,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <span class="logo-text">Ali<span style="color:var(--primary);">Servis</span>.az</span>
-                    <p>Профессиональный ремонт кондиционеров, обслуживание котлов, ремонт стиральных машин и сервисное обслуживание бытовой техники в Баку и пригородных районах. Гарантийный ремонт и оперативный сервис.</p>
+                    <p data-i18n="footer.desc">Профессиональный ремонт кондиционеров, обслуживание котлов, ремонт стиральных машин и сервисное обслуживание бытовой техники в Баку и пригородных районах.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
@@ -2636,24 +2807,24 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Услуги</h4>
+                    <h4 data-i18n="footer.services">Услуги</h4>
                     <ul>
-                        <li><a href="#services" data-page="services">Ремонт кондиционеров</a></li>
-                        <li><a href="#services" data-page="services">Ремонт котлов</a></li>
-                        <li><a href="#services" data-page="services">Ремонт стиральных машин</a></li>
-                        <li><a href="#services" data-page="services">Ремонт бытовой техники</a></li>
+                        <li><a href="#services" data-page="services" data-i18n="svc.ac.title">Ремонт кондиционеров</a></li>
+                        <li><a href="#services" data-page="services" data-i18n="svc.boiler.title">Ремонт котлов</a></li>
+                        <li><a href="#services" data-page="services" data-i18n="svc.wm.title">Ремонт стиральных машин</a></li>
+                        <li><a href="#services" data-page="services" data-i18n="svc.general.title">Ремонт бытовой техники</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Компания</h4>
+                    <h4 data-i18n="footer.company">Компания</h4>
                     <ul>
-                        <li><a href="#home" data-page="home">Главная</a></li>
-                        <li><a href="#about" data-page="about">О нас</a></li>
-                        <li><a href="#contact" data-page="contact">Контакты</a></li>
+                        <li><a href="#home" data-page="home" data-i18n="nav.home">Главная</a></li>
+                        <li><a href="#about" data-page="about" data-i18n="nav.about">О нас</a></li>
+                        <li><a href="#contact" data-page="contact" data-i18n="nav.contact">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Контакты</h4>
+                    <h4 data-i18n="footer.contacts">Контакты</h4>
                     <ul>
                         <li><a href="tel:+994992445005"><i class="fas fa-phone" style="margin-right:6px;"></i>+994 992 44 50 05</a></li>
                         <li><a href="mailto:info@aliservis.az"><i class="fas fa-envelope" style="margin-right:6px;"></i>info@aliservis.az</a></li>
@@ -2662,15 +2833,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AliServis.az – Все права защищены.</p>
-                <p>Профессиональный ремонт кондиционеров, котлов и стиральных машин в Баку</p>
+                <p data-i18n="footer.copyright">&copy; 2026 AliServis.az – Все права защищены.</p>
+                <p data-i18n="footer.tagline">Профессиональный ремонт кондиционеров, котлов и стиральных машин в Баку</p>
             </div>
         </div>
     </footer>
 
     <!-- ===== FLOATING BUTTONS ===== -->
     <div class="floating-buttons">
-        <a href="tel:+994992445005" class="floating-btn call" aria-label="Экстренный вызов">
+        <a href="tel:+994992445005" class="floating-btn call" data-i18n-aria="float.call" aria-label="Экстренный вызов">
             <i class="fas fa-phone"></i>
         </a>
         <a href="https://wa.me/994992445005" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
@@ -2679,190 +2850,16 @@
     </div>
 
     <!-- Scroll to Top -->
-    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+    <button class="scroll-top" id="scrollTop" data-i18n-aria="scroll.top" aria-label="Наверх">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- ===== JAVASCRIPT ===== -->
-    <script>
-        (function() {
-            'use strict';
-
-            // === SPA Navigation ===
-            const navLinks = document.querySelectorAll('[data-page]');
-            const pageSections = document.querySelectorAll('.page-section');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const hamburger = document.getElementById('hamburger');
-
-            function navigateTo(page) {
-                pageSections.forEach(function(section) {
-                    section.classList.remove('active');
-                });
-                var target = document.getElementById('page-' + page);
-                if (target) {
-                    target.classList.add('active');
-                }
-
-                // Update active nav link
-                document.querySelectorAll('.nav-link').forEach(function(link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-page') === page) {
-                        link.classList.add('active');
-                    }
-                });
-
-                // Close mobile menu
-                mobileMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-                document.body.style.overflow = '';
-
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                // Update URL hash
-                history.pushState(null, '', '#' + page);
-            }
-
-            navLinks.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var page = this.getAttribute('data-page');
-                    if (page) {
-                        navigateTo(page);
-                    }
-                });
-            });
-
-            // Handle browser back/forward
-            window.addEventListener('popstate', function() {
-                var hash = window.location.hash.replace('#', '') || 'home';
-                navigateTo(hash);
-            });
-
-            // Initial load based on hash
-            var initialPage = window.location.hash.replace('#', '') || 'home';
-            if (initialPage !== 'home') {
-                navigateTo(initialPage);
-            }
-
-            // === Hamburger Menu ===
-            hamburger.addEventListener('click', function() {
-                this.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-            });
-
-            // === Header Scroll Effect ===
-            var header = document.getElementById('header');
-            var scrollTop = document.getElementById('scrollTop');
-
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-
-                if (window.scrollY > 400) {
-                    scrollTop.classList.add('visible');
-                } else {
-                    scrollTop.classList.remove('visible');
-                }
-            });
-
-            scrollTop.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // === Fade In Animation ===
-            var fadeElements = document.querySelectorAll('.fade-in');
-            
-            function checkFade() {
-                fadeElements.forEach(function(el) {
-                    var rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 100) {
-                        el.classList.add('visible');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', checkFade);
-            window.addEventListener('load', checkFade);
-
-            // === Contact Form Validation ===
-            var form = document.getElementById('contactForm');
-            var formSuccess = document.getElementById('formSuccess');
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                var name = document.getElementById('name');
-                var phone = document.getElementById('phone');
-                var nameError = document.getElementById('nameError');
-                var phoneError = document.getElementById('phoneError');
-                var isValid = true;
-
-                // Reset errors
-                name.classList.remove('error');
-                phone.classList.remove('error');
-                nameError.classList.remove('visible');
-                phoneError.classList.remove('visible');
-
-                // Validate name
-                if (name.value.trim().length < 2) {
-                    name.classList.add('error');
-                    nameError.classList.add('visible');
-                    isValid = false;
-                }
-
-                // Validate phone
-                var phoneRegex = /^[\+]?[(]?[0-9]{2,3}[)]?[-\s\.]?[0-9]{2,3}[-\s\.]?[0-9]{2,4}$/;
-                var phoneClean = phone.value.replace(/[\s\-\(\)]/g, '');
-                if (phoneClean.length < 9 || !/^[\+]?[0-9]{9,15}$/.test(phoneClean)) {
-                    phone.classList.add('error');
-                    phoneError.classList.add('visible');
-                    isValid = false;
-                }
-
-                if (isValid) {
-                    form.style.display = 'none';
-                    formSuccess.classList.add('visible');
-                    
-                    // Reset after 5 seconds
-                    setTimeout(function() {
-                        form.reset();
-                        form.style.display = 'block';
-                        formSuccess.classList.remove('visible');
-                    }, 5000);
-                }
-            });
-
-            // === Language Switcher ===
-            var langBtns = document.querySelectorAll('.lang-btn');
-            
-            langBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    langBtns.forEach(function(b) { b.classList.remove('active'); });
-                    this.classList.add('active');
-                    // Language switching logic can be expanded here
-                });
-            });
-
-            // === Smooth scroll for anchor links ===
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    var target = this.getAttribute('href');
-                    if (target.length > 1 && !this.hasAttribute('data-page')) {
-                        e.preventDefault();
-                        var element = document.querySelector(target);
-                        if (element) {
-                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                    }
-                });
-            });
-
-        })();
-    </script>
+    <noscript>
+        <div style="padding:20px;text-align:center;background:#fff3cd;color:#856404;">
+            Для полной работы сайта включите JavaScript. / Saytın tam işləməsi üçün JavaScript-i aktiv edin.
+        </div>
+    </noscript>
+    <script src="i18n.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
