@@ -170,7 +170,12 @@ window.ALI_I18N = {
     'about.page.f1.desc': 'Сертифицированная и опытная команда специалистов',
     'about.page.f2.desc': 'Выезд мастера в течение 1 часа после заказа',
     'about.page.f3.desc': '6 месяцев гарантии на все виды работ',
-    'about.page.f4.desc': 'Используем только оригинальные запчасти'
+    'about.page.f4.desc': 'Используем только оригинальные запчасти',
+    'keywords.title': 'Ключевые слова',
+    'nav.kombi': 'Котлы',
+    'page.kombi.title': 'Ремонт и обслуживание котлов в Баку',
+    'page.kombi.subtitle': 'Профессиональный сервис котлов всех марок. Диагностика, ремонт, чистка и профилактика.',
+    'page.kombi.intro': 'Команда AliServis.az выполняет ремонт и обслуживание котлов Immergas, Demirdöküm, Ariston, Baxi, Baymak и других марок в Баку и пригородах. Срочный выезд, гарантия 6 месяцев.'
   },
   az: {
     'meta.title': 'AliServis.az – Bakıda kondisioner, kombi və paltaryuyan təmiri',
@@ -342,6 +347,11 @@ window.ALI_I18N = {
     'about.page.f1.desc': 'Sertifikatlı və təcrübəli mütəxəssislər komandası',
     'about.page.f2.desc': 'Sifarişdən sonra 1 saat ərzində ustanın gəlməsi',
     'about.page.f3.desc': 'Bütün iş növlərinə 6 ay zəmanət',
-    'about.page.f4.desc': 'Yalnız orijinal ehtiyat hissələri istifadə edirik'
+    'about.page.f4.desc': 'Yalnız orijinal ehtiyat hissələri istifadə edirik',
+    'keywords.title': 'Açar sözlər',
+    'nav.kombi': 'Kombi',
+    'page.kombi.title': 'Bakıda kombi təmiri və servisi',
+    'page.kombi.subtitle': 'Bütün markaların kombilərinin peşəkar servisi. Diaqnostika, təmir, təmizlik və profilaktika.',
+    'page.kombi.intro': 'AliServis.az komandası Bakı və ətraf rayonlarda Immergas, Demirdöküm, Ariston, Baxi, Baymak və digər markaların kombilərinin təmiri və servisini həyata keçirir. Təcili gəliş, 6 ay zəmanət.'
   }
 };

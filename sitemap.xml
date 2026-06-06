@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- ANA SAYFA -->
     <url>
         <loc>https://aliservis.az/</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://aliservis.az/" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
-        <xhtml:link rel="alternate" hreflang="az" href="https://aliservis.az/?lang=az" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://aliservis.az/" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://aliservis.az/"/>
+        <xhtml:link rel="alternate" hreflang="az" href="https://aliservis.az/?lang=az"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aliservis.az/"/>
     </url>
 
-    <!-- ANA SAYFA (AZ versiyonu) -->
     <url>
         <loc>https://aliservis.az/?lang=az</loc>
         <lastmod>2026-06-06</lastmod>
@@ -23,112 +19,65 @@
         <priority>0.9</priority>
     </url>
 
-    <!-- SERVİSLER (SPA) -->
     <url>
-        <loc>https://aliservis.az/#services</loc>
+        <loc>https://aliservis.az/services.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://aliservis.az/services.html"/>
+        <xhtml:link rel="alternate" hreflang="az" href="https://aliservis.az/services.html?lang=az"/>
     </url>
 
-    <!-- SERVİSLER (AZ versiyonu) -->
     <url>
-        <loc>https://aliservis.az/?lang=az#services</loc>
+        <loc>https://aliservis.az/services.html?lang=az</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- KONDİSYONER SERVİSİ (Detaylı sayfa) -->
     <url>
-        <loc>https://aliservis.az/#services</loc>
+        <loc>https://aliservis.az/kombi-servisi.html</loc>
         <lastmod>2026-06-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kondisioner-temiri-baki.webp</image:loc>
-            <image:title>Rus: Ремонт кондиционеров в Баку</image:title>
-            <image:caption>Rus: Профессиональный ремонт кондиционеров в Баку</image:caption>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kondisioner-qaz-baki.webp</image:loc>
-            <image:title>Rus: Заправка кондиционера фреоном</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kondisioner-temir.webp</image:loc>
-            <image:title>Rus: Ремонт кондиционера</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kondisioner-qaz.webp</image:loc>
-            <image:title>Rus: Сервис кондиционера</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kondisioner-ustasi-baki.webp</image:loc>
-            <image:title>Rus: Мастер по кондиционерам в Баку</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/hero-kondisioner.webp</image:loc>
-            <image:title>Rus: Ремонт кондиционеров в Баку</image:title>
-        </image:image>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://aliservis.az/kombi-servisi.html"/>
+        <xhtml:link rel="alternate" hreflang="az" href="https://aliservis.az/kombi-servisi.html?lang=az"/>
     </url>
 
-    <!-- KOMBİ SERVİSİ -->
     <url>
-        <loc>https://aliservis.az/#services</loc>
+        <loc>https://aliservis.az/kombi-servisi.html?lang=az</loc>
         <lastmod>2026-06-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kombi-temiri-baki.webp</image:loc>
-            <image:title>Rus: Ремонт котлов в Баку</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kombi-temir.webp</image:loc>
-            <image:title>Rus: Ремонт котла</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kombi-qurasdirma-baki.webp</image:loc>
-            <image:title>Rus: Установка котла в Баку</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kombi-qurasdirma.webp</image:loc>
-            <image:title>Rus: Монтаж котельного оборудования</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/kombi-ustasi-baki.webp</image:loc>
-            <image:title>Rus: Мастер по котлам в Баку</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://aliservis.az/images/hero-kombi.webp</image:loc>
-            <image:title>Rus: Ремонт котлов в Баку</image:title>
-        </image:image>
     </url>
 
-    <!-- HAKKIMIZDA -->
     <url>
-        <loc>https://aliservis.az/#about</loc>
+        <loc>https://aliservis.az/about.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://aliservis.az/about.html"/>
+        <xhtml:link rel="alternate" hreflang="az" href="https://aliservis.az/about.html?lang=az"/>
     </url>
 
     <url>
-        <loc>https://aliservis.az/?lang=az#about</loc>
+        <loc>https://aliservis.az/about.html?lang=az</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
-    <!-- İLETİŞİM -->
     <url>
-        <loc>https://aliservis.az/#contact</loc>
+        <loc>https://aliservis.az/contact.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://aliservis.az/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="az" href="https://aliservis.az/contact.html?lang=az"/>
     </url>
 
     <url>
-        <loc>https://aliservis.az/?lang=az#contact</loc>
+        <loc>https://aliservis.az/contact.html?lang=az</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

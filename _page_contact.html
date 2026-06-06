@@ -1,0 +1,106 @@
+﻿<section class="section contact" style="padding-top:120px;" aria-label="Контакты">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="contact.title">Свяжитесь с нами</h2>
+                    <p class="section-subtitle" data-i18n="contact.subtitle">Есть вопросы? Свяжитесь с нами, мы будем рады помочь вам.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-info-card">
+                                <h3 data-i18n="contact.info">Контактная информация</h3>
+                                <div class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <a href="tel:+994554770327">+994 55 477 03 27</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-item-icon" style="background:#e6f9f1;color:var(--secondary);">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <a href="https://wa.me/994554770327" target="_blank" rel="noopener">+994 55 477 03 27</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <a href="mailto:info@aliservis.az">info@aliservis.az</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        г. Баку, Низаминский район
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-info-card">
+                                <h3 data-i18n="contact.hours">Часы работы</h3>
+                                <div class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <span data-i18n="contact.hours.week">Понедельник – Воскресенье: 08:00 – 22:00</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-item-icon" style="background:#fff3e0;color:#f59e0b;">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <span data-i18n="contact.hours.emergency">Экстренная служба: доступна 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Google Maps Embed -->
+                            <div class="map-container">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48789.67757676682!2d49.837092!3d40.409262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d18498d6b3d%3A0x8a8c5f8e8b8c8d8e!2sNizami%20Rayonu%2C%20Baku!5e0!3m2!1sru!2saz!4v1234567890" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="AliServis.az - На карте">
+                                </iframe>
+                            </div>
+                            
+                            <div class="ad-space" style="min-height:120px;margin-top:20px;">
+                                <span data-i18n="ad.contact">Yandex Direct Рекламное место</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-wrapper">
+                            <h3 data-i18n="contact.form.title">Отправьте нам сообщение</h3>
+                            <form id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name" data-i18n="contact.form.name">Ваше имя *</label>
+                                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" data-i18n-placeholder="contact.form.name.ph" required>
+                                    <div class="form-error" id="nameError" data-i18n="contact.form.name.error">Пожалуйста, введите ваше имя</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" data-i18n="contact.form.phone">Телефон *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+994 XX XXX XX XX" data-i18n-placeholder="contact.form.phone.ph" required>
+                                    <div class="form-error" id="phoneError" data-i18n="contact.form.phone.error">Введите корректный номер телефона</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" data-i18n="contact.form.message">Ваше сообщение</label>
+                                    <textarea id="message" name="message" placeholder="Кратко опишите услугу..." data-i18n-placeholder="contact.form.message.ph"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                                    <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.submit">Отправить</span>
+                                </button>
+                            </form>
+                            <div class="form-success" id="formSuccess">
+                                <i class="fas fa-check-circle"></i> <span data-i18n="contact.form.success">Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
