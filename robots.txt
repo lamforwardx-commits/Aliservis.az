@@ -1,11 +1,10 @@
-# robots.txt for AliServis.az
-# Last updated: 2026-06-06
+# robots.txt for TeknoSoHome
+# Last updated: 2026-06-10
 
 User-agent: *
 Allow: /
 Allow: /?lang=az
 Allow: /services.html
-Allow: /kombi-servisi.html
 Allow: /about.html
 Allow: /contact.html
 Allow: /images/
@@ -33,7 +32,7 @@ Allow: /images/
 Disallow: /?q=
 Disallow: /?s=
 Disallow: /cdn-cgi/
-Host: https://aliservis.az
+Host: https://teknosohome.az
 Crawl-delay: 0.5
 
 User-agent: Bingbot
@@ -49,4 +48,4 @@ Allow: /images/
 User-agent: YandexImages
 Allow: /images/
 
-Sitemap: https://aliservis.az/sitemap.xml
+Sitemap: https://teknosohome.az/sitemap.xml
