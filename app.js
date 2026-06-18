@@ -107,6 +107,18 @@
           document.body.style.overflow = '';
         });
       });
+
+      // Mobile submenu toggle (for "Xidmətlər")
+      var mobileDropBtn = mobileMenu.querySelector('.mobile-dropdown .nav-link--drop');
+      var mobileSubmenu = mobileMenu.querySelector('.mobile-submenu');
+      if (mobileDropBtn && mobileSubmenu) {
+        mobileDropBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          mobileSubmenu.classList.toggle('open');
+          var expanded = mobileDropBtn.getAttribute('aria-expanded') === 'true';
+          mobileDropBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+      }
     }
 
     var header = document.getElementById('header');
@@ -132,6 +144,30 @@
       });
     }
     window.addEventListener('load', checkFade);
+
+    // Desktop dropdown toggle & accessibility
+    document.querySelectorAll('.nav-link--drop').forEach(function (btn) {
+      // desktop buttons inside .nav-dropdown
+      var parent = btn.closest('.nav-dropdown');
+      if (!parent) return;
+      btn.setAttribute('aria-expanded', parent.classList.contains('open') ? 'true' : 'false');
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var isOpen = parent.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (e) {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function (el) {
+        if (!el.contains(e.target)) {
+          el.classList.remove('open');
+          var btn = el.querySelector('.nav-link--drop');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
 
     var form = document.getElementById('contactForm');
     var formSuccess = document.getElementById('formSuccess');

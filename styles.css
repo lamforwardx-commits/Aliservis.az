@@ -212,6 +212,61 @@
             background: var(--primary-light);
         }
 
+        /* Dropdown menu (desktop) */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-md);
+            padding: 8px 0;
+            z-index: 1000;
+        }
+
+        .nav-dropdown .dropdown-link {
+            display: block;
+            padding: 10px 16px;
+            color: var(--gray-700);
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown .dropdown-link:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* show on hover for desktop */
+        @media (min-width: 900px) {
+            .nav-dropdown:hover .dropdown-menu,
+            .nav-dropdown.open .dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Mobile submenu */
+        .mobile-submenu {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .mobile-submenu a {
+            color: var(--gray-800);
+            text-decoration: none;
+        }
+        .mobile-submenu.open {
+            display: flex;
+        }
+
         .header-phone {
             display: flex;
             align-items: center;
