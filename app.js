@@ -169,6 +169,16 @@
       });
     });
 
+    // First visit popup
+    var firstVisitPopup = document.getElementById('firstVisitPopup');
+    if (!localStorage.getItem('firstVisit')) {
+      firstVisitPopup.classList.add('visible');
+      document.querySelector('.popup-close').addEventListener('click', function () {
+        firstVisitPopup.classList.remove('visible');
+        localStorage.setItem('firstVisit', 'true');
+      });
+    }
+
     var form = document.getElementById('contactForm');
     var formSuccess = document.getElementById('formSuccess');
     if (form) {
