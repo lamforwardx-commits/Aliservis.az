@@ -58,10 +58,10 @@
       var kw = document.querySelector('meta[name="keywords"]');
       if (kw && pageMeta.keywords) kw.setAttribute('content', pageMeta.keywords);
     } else {
-      document.title = (lang === SEO_LANG ? seoDict : dict)['meta.title'] || document.title;
+      document.title = dict['meta.title'] || document.title;
       var descEl = document.querySelector('meta[name="description"]');
       if (descEl) {
-        var descText = (lang === SEO_LANG ? seoDict : dict)['meta.description'];
+        var descText = dict['meta.description'];
         if (descText) descEl.setAttribute('content', descText);
       }
     }
