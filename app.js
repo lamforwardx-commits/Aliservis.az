@@ -108,7 +108,6 @@
         });
       });
 
-      // Mobile submenu toggle (for "Xidmətlər")
       var mobileDropBtn = mobileMenu.querySelector('.mobile-dropdown .nav-link--drop');
       var mobileSubmenu = mobileMenu.querySelector('.mobile-submenu');
       if (mobileDropBtn && mobileSubmenu) {
@@ -145,9 +144,7 @@
     }
     window.addEventListener('load', checkFade);
 
-    // Desktop dropdown toggle & accessibility
     document.querySelectorAll('.nav-link--drop').forEach(function (btn) {
-      // desktop buttons inside .nav-dropdown
       var parent = btn.closest('.nav-dropdown');
       if (!parent) return;
       btn.setAttribute('aria-expanded', parent.classList.contains('open') ? 'true' : 'false');
@@ -158,7 +155,6 @@
       });
     });
 
-    // Close dropdowns when clicking outside
     document.addEventListener('click', function (e) {
       document.querySelectorAll('.nav-dropdown.open').forEach(function (el) {
         if (!el.contains(e.target)) {
@@ -169,15 +165,52 @@
       });
     });
 
-    // First visit popup
-    var firstVisitPopup = document.getElementById('firstVisitPopup');
-    if (!localStorage.getItem('firstVisit')) {
-      firstVisitPopup.classList.add('visible');
-      document.querySelector('.popup-close').addEventListener('click', function () {
-        firstVisitPopup.classList.remove('visible');
-        localStorage.setItem('firstVisit', 'true');
-      });
-    }
+    // ===== WELCOME MODAL =====
+    (function() {
+        var modal = document.getElementById('welcomeModal');
+        if (!modal) return;
+        
+        var shownKey = 'welcomeModalShown';
+        var alreadyShown = false;
+        
+        try {
+            alreadyShown = sessionStorage.getItem(shownKey) === 'true';
+        } catch (e) {}
+        
+        function openModal() {
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+            try {
+                sessionStorage.setItem(shownKey, 'true');
+            } catch (e) {}
+        }
+        
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        }
+        
+        if (!alreadyShown) {
+            setTimeout(openModal, 1200);
+        }
+        
+        modal.querySelectorAll('[data-close-modal]').forEach(function(el) {
+            el.addEventListener('click', closeModal);
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+        
+        modal.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeModal);
+        });
+    })();
+    // ===== END WELCOME MODAL =====
 
     var form = document.getElementById('contactForm');
     var formSuccess = document.getElementById('formSuccess');
