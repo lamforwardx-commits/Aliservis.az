@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'teknosohome_lang';
+  var STORAGE_KEY = 'mikrorayonservis_lang';
   var DEFAULT_LANG = 'ru';
   var SEO_LANG = 'ru';
   var currentLang = DEFAULT_LANG;

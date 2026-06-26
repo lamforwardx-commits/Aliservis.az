@@ -56,15 +56,15 @@ $kombiBody = Read-Utf8 'kombi-body.html'
 
 @(
     @{ out='index.html'; active='HOME'; kwPage='home'; bodyFile='_page_home.html'; metaKey='index'
-       canonical='https://teknosohome.az/'; canonicalAz='https://teknosohome.az/?lang=az' },
+       canonical='https://mikrorayonservis.az/'; canonicalAz='https://mikrorayonservis.az/?lang=az' },
     @{ out='services.html'; active='SERVICES'; kwPage='services'; bodyFile='_page_services.html'; metaKey='services'
-       canonical='https://teknosohome.az/services.html'; canonicalAz='https://teknosohome.az/services.html?lang=az' },
+       canonical='https://mikrorayonservis.az/services.html'; canonicalAz='https://mikrorayonservis.az/services.html?lang=az' },
     @{ out='about.html'; active='ABOUT'; kwPage='about'; bodyFile='_page_about.html'; metaKey='about'
-       canonical='https://teknosohome.az/about.html'; canonicalAz='https://teknosohome.az/about.html?lang=az' },
+       canonical='https://mikrorayonservis.az/about.html'; canonicalAz='https://mikrorayonservis.az/about.html?lang=az' },
     @{ out='contact.html'; active='CONTACT'; kwPage='contact'; bodyFile='_page_contact.html'; metaKey='contact'
-       canonical='https://teknosohome.az/contact.html'; canonicalAz='https://teknosohome.az/contact.html?lang=az' },
+       canonical='https://mikrorayonservis.az/contact.html'; canonicalAz='https://mikrorayonservis.az/contact.html?lang=az' },
     @{ out='kombi-servisi.html'; active='KOMBI'; kwPage='kombi'; body=$kombiBody; metaKey='kombi'
-       canonical='https://teknosohome.az/kombi-servisi.html'; canonicalAz='https://teknosohome.az/kombi-servisi.html?lang=az'
+       canonical='https://mikrorayonservis.az/kombi-servisi.html'; canonicalAz='https://mikrorayonservis.az/kombi-servisi.html?lang=az'
        extraHead=$kombiMeta }
 ) | ForEach-Object {
     $m = $meta.($_.metaKey)

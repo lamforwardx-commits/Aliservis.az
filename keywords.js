@@ -1,58 +1,66 @@
-/* TeknoSoHome.az – səhifəyə görə açar sözlər */
+/* mikrorayonservis.az – səhifəyə görə açar sözlər */
 window.ALI_KEYWORDS = {
   home: [
-    'kondisioner təmiri',
+    'mikrorayonservis.az',
+    'MikrorayonServis',
+    'ремонт кондиционеров Баку',
+    'монтаж кондиционеров',
+    'kondisioner təmiri Bakı',
     'kondisioner quraşdırılması',
     'kondisioner servisi Bakı',
     'kondisioner ustası',
+    'HVAC Bakı',
     'VRF sistemləri',
     'VRV sistemləri',
+    'çiller sistemi',
     'havalandırma sistemləri',
-    'HVAC xidmətləri',
     'freon doldurulması',
-    '24/7 servis',
-    'zəmanətli xidmət',
-    'TeknoSoHome'
+    'split kondisioner servisi',
+    'kombi təmiri Bakı',
+    '24/7 kondisioner servisi',
+    'zəmanətli HVAC xidməti'
   ],
   services: [
     'kondisioner təmiri',
     'kondisioner quraşdırılması',
     'freon doldurulması',
-    'kondisioner servisi',
+    'kondisioner servisi Bakı',
     'split kondisioner servisi',
     'kaset tipli kondisioner',
     'kanal tipli kondisioner',
     'VRF sistemlərinin quraşdırılması',
     'VRV sistemlərinin servisi',
+    'kombi təmiri',
+    'kombi servisi',
     'havalandırma sistemləri',
     'HVAC həlləri',
     'texniki baxış',
     'diaqnostika',
-    'profilaktik servis'
+    'mikrorayonservis.az'
   ],
   about: [
-    'TeknoSoHome',
+    'MikrorayonServis',
+    'mikrorayonservis.az',
     'kondisioner servisi Bakı',
     'HVAC şirkəti',
     'peşəkar ustalar',
     'zəmanətli xidmət',
     'müştəri məmnuniyyəti',
     'orijinal ehtiyat hissələri',
-    'müasir avadanlıqlar',
-    'havalandırma sistemləri',
     'VRF və VRV mütəxəssisləri',
+    'ремонт кондиционеров Баку',
     'etibarlı servis xidməti'
   ],
   contact: [
-    'TeknoSoHome əlaqə',
+    'MikrorayonServis əlaqə',
+    'mikrorayonservis.az',
     'kondisioner ustası Bakı',
-    '055 246 74 77',
-    '+994 55 246 74 77',
+    '+994 55 477 03 27',
+    '055 477 03 27',
     'WhatsApp əlaqə',
     '24/7 servis xidməti',
     'təcili texniki dəstək',
     'kondisioner servisi',
-    'havalandırma sistemləri',
     'pulsuz məsləhət'
   ]
 };

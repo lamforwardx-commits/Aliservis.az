@@ -1,5 +1,5 @@
-# robots.txt for TeknoSoHome
-# Last updated: 2026-06-10
+# robots.txt for MikrorayonServis
+# Last updated: 2026-06-26
 
 User-agent: *
 Allow: /
@@ -7,7 +7,9 @@ Allow: /?lang=az
 Allow: /services.html
 Allow: /about.html
 Allow: /contact.html
-Allow: /images/
+Allow: /korporativ-senaye.html
+Allow: /privacy-policy.html
+Allow: /cookie-policy.html
 Disallow: /?q=
 Disallow: /?s=
 Disallow: /cdn-cgi/
@@ -32,7 +34,7 @@ Allow: /images/
 Disallow: /?q=
 Disallow: /?s=
 Disallow: /cdn-cgi/
-Host: https://teknosohome.az
+Host: https://mikrorayonservis.az
 Crawl-delay: 0.5
 
 User-agent: Bingbot
@@ -48,4 +50,4 @@ Allow: /images/
 User-agent: YandexImages
 Allow: /images/
 
-Sitemap: https://teknosohome.az/sitemap.xml
+Sitemap: https://mikrorayonservis.az/sitemap.xml
