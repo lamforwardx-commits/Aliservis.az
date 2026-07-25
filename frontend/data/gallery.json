@@ -1,0 +1,76 @@
+{
+  "images": [
+    {
+      "id": "g1",
+      "src": "/images/gallery/terrace-evening.svg",
+      "alt": "Evening terrace dining at Araz Terrace",
+      "span": "tall"
+    },
+    {
+      "id": "g2",
+      "src": "/images/gallery/plov-table.svg",
+      "alt": "Shah plov served at the table",
+      "span": "wide"
+    },
+    {
+      "id": "g3",
+      "src": "/images/gallery/grill-fire.svg",
+      "alt": "Charcoal grill with kebabs",
+      "span": "square"
+    },
+    {
+      "id": "g4",
+      "src": "/images/gallery/interior-gold.svg",
+      "alt": "Elegant restaurant interior with warm lighting",
+      "span": "tall"
+    },
+    {
+      "id": "g5",
+      "src": "/images/gallery/tea-service.svg",
+      "alt": "Traditional Azerbaijani tea service",
+      "span": "square"
+    },
+    {
+      "id": "g6",
+      "src": "/images/gallery/seafood-plate.svg",
+      "alt": "Grilled seafood platter",
+      "span": "wide"
+    },
+    {
+      "id": "g7",
+      "src": "/images/gallery/dessert-board.svg",
+      "alt": "Pakhlava and dessert selection",
+      "span": "square"
+    },
+    {
+      "id": "g8",
+      "src": "/images/gallery/vip-hall.svg",
+      "alt": "VIP hall ready for a private event",
+      "span": "tall"
+    },
+    {
+      "id": "g9",
+      "src": "/images/gallery/breakfast.svg",
+      "alt": "Azerbaijani breakfast platter",
+      "span": "wide"
+    },
+    {
+      "id": "g10",
+      "src": "/images/gallery/city-night.svg",
+      "alt": "Baku night atmosphere from the terrace",
+      "span": "square"
+    },
+    {
+      "id": "g11",
+      "src": "/images/gallery/steak-cut.svg",
+      "alt": "Premium steak carved tableside",
+      "span": "tall"
+    },
+    {
+      "id": "g12",
+      "src": "/images/gallery/cheers.svg",
+      "alt": "Guests celebrating on the terrace",
+      "span": "square"
+    }
+  ]
+}

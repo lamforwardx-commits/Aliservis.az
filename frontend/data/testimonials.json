@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "Araz Terrace feels like Baku at its most generous — warm light, impeccable kebabs, and a terrace that makes time slow down.",
+      "author": "Sofia Laurent",
+      "role": "Travel Writer, Paris"
+    },
+    {
+      "id": "t2",
+      "quote": "The Shah Plov alone is worth the visit. Elegant without pretension, and service that makes every guest feel celebrated.",
+      "author": "Daniel Whitmore",
+      "role": "Food Critic"
+    },
+    {
+      "id": "t3",
+      "quote": "From thyme tea to charcoal grill, every detail carries the spirit of Azerbaijan. Our favorite table in the city.",
+      "author": "Leyla & Amir",
+      "role": "Regular Guests, Baku"
+    }
+  ]
+}

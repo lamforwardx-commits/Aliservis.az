@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "homeTitle": "Araz Terrace | Bakü'de lüks restoran",
+    "homeDescription": "Araz Terrace — Bakü merkezinde teraslı lüks restoran. Azerbaycan mutfağı, kebaplar, Şah pilav ve sıcak misafirperverlik.",
+    "aboutTitle": "Hakkımızda",
+    "aboutDescription": "Araz Terrace'ın hikâyesi, terası ve Bakü'deki Azerbaycan mutfağı geleneği.",
+    "menuTitle": "Menü",
+    "menuDescription": "Kebaplar, pilavlar, kutablar, salatalar, tatlılar ve içecekler — Araz Terrace menüsü.",
+    "galleryTitle": "Galeri",
+    "galleryDescription": "Araz Terrace restoranının iç mekânı, terası ve mutfağından gerçek fotoğraflar.",
+    "eventsTitle": "Etkinlikler",
+    "eventsDescription": "VIP salon, davetler ve özel akşamlar için Araz Terrace.",
+    "reservationsTitle": "Rezervasyon",
+    "reservationsDescription": "Araz Terrace'da masa ayırtın — teras ve VIP oturma.",
+    "contactTitle": "İletişim",
+    "contactDescription": "Adres, telefon, çalışma saatleri ve harita — Araz Terrace, Bakü.",
+    "keywords": "Araz Terrace, Bakü restoran, Azerbaycan mutfağı, kebap, teras, Şah pilav, rezervasyon"
+  },
+  "nav": {
+    "home": "Ana sayfa",
+    "about": "Hakkımızda",
+    "menu": "Menü",
+    "gallery": "Galeri",
+    "events": "Etkinlikler",
+    "reservations": "Rezervasyon",
+    "contact": "İletişim",
+    "reserve": "Masa ayırt",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "language": "Dil"
+  },
+  "hero": {
+    "eyebrow": "Bakü · İslam Seferli",
+    "title": "Araz Terrace",
+    "subtitle": "Şehrin kalbinde lüks teras mutfağı",
+    "text": "Közde kebaplar, Şah pilav, taze kutablar ve Bakü akşam ışıkları altında zarif atmosfer.",
+    "reserve": "Masa ayırt",
+    "menu": "Menüyü gör"
+  },
+  "chef": {
+    "eyebrow": "Mutfak",
+    "title": "Şefin felsefesi",
+    "text": "Geleneksel Azerbaycan tariflerini mevsimsel ürünler ve hassas teknikle birleştiriyoruz. Her tabak — lezzet, aroma ve misafirperverliğin dengesi.",
+    "points": {
+      "p1": "Köz üzerinde pişen kebaplar",
+      "p2": "El yapımı pilav ve dolma geleneği",
+      "p3": "Şeffaf, mevsimsel ürünler"
+    }
+  },
+  "popular": {
+    "eyebrow": "Seçilmiş lezzetler",
+    "title": "Popüler yemekler",
+    "text": "Misafirlerin en çok tercih ettiği Araz Terrace klasikleri.",
+    "cta": "Tam menü"
+  },
+  "stats": {
+    "eyebrow": "Rakamlarla",
+    "title": "Bakü'nün tercihi",
+    "rating": "Google puanı",
+    "reviews": "Yorum",
+    "dishes": "Menü kalemi",
+    "hours": "Günlük hizmet"
+  },
+  "reviews": {
+    "eyebrow": "Google yorumları",
+    "title": "Binlerce misafirin sevgisi",
+    "text": "Temiz mekân, lezzetli milli yemekler ve merkezi konum — misafirlerin en çok vurguladığı noktalar.",
+    "viewMaps": "Google Maps'te gör"
+  },
+  "gallery": {
+    "eyebrow": "Atmosfer",
+    "title": "Galeri",
+    "text": "Teras, iç mekân ve sofradan kareler.",
+    "cta": "Tüm galeri"
+  },
+  "instagram": {
+    "eyebrow": "Sosyal",
+    "title": "Instagram",
+    "text": "@arazterrace — sofra, teras ve kutlama anları."
+  },
+  "awards": {
+    "eyebrow": "Tanınırlık",
+    "title": "Ödüller ve ayrıcalıklar"
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "title": "Sık sorulan sorular"
+  },
+  "cta": {
+    "title": "Bu akşam masanız hazır",
+    "text": "Teras veya VIP salon — özel gününüzü Araz Terrace'da geçirin.",
+    "button": "Şimdi rezervasyon yap"
+  },
+  "about": {
+    "eyebrow": "Hikâyemiz",
+    "title": "Bakü'nün buluştuğu teras",
+    "p1": "Araz Terrace, İslam Seferli Caddesi'nde; Çeşme Meydanı ve İçerişehir'e yakın konumdadır. Yazın açık teras, kışın büyük camlarla korunan sıcak ortam sizi karşılar.",
+    "p2": "Menümüzde Lüle kebap, Şah pilav, yaprak dolması, kutablar, düşbere ve Şefin “Araz” salatası gibi milli klasikler; ayrıca biftek ve deniz ürünleri yer alır.",
+    "features": {
+      "f1": "Yaz terası ve merkezi konum",
+      "f2": "VIP salon ve davetler",
+      "f3": "Azerbaycan ve uluslararası menü",
+      "f4": "Çok dilli hizmet"
+    }
+  },
+  "menuPage": {
+    "eyebrow": "Mutfak",
+    "title": "Menü",
+    "text": "Sabahtan geceye — kebaplar, pilavlar, salatalar ve tatlılar."
+  },
+  "galleryPage": {
+    "eyebrow": "Görsel hikâye",
+    "title": "Galeri",
+    "text": "Restoranın gerçek fotoğrafları — teras, iç mekân ve sofra."
+  },
+  "eventsPage": {
+    "eyebrow": "Buluşmalar",
+    "title": "Etkinlikler ve kutlamalar",
+    "text": "Doğum günleri, kurumsal akşamlar ve VIP davetler.",
+    "cta": "Etkinlik planla"
+  },
+  "reservations": {
+    "eyebrow": "Masa rezervasyonu",
+    "title": "Rezervasyon",
+    "text": "Akşamlar ve hafta sonları için önceden rezervasyon önerilir.",
+    "call": "Aramak ister misiniz?",
+    "success": "Teşekkürler — rezervasyon talebiniz alındı. Kısa sürede onaylayacağız.",
+    "submit": "Rezervasyon gönder",
+    "sending": "Gönderiliyor...",
+    "fields": {
+      "name": "Ad Soyad",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "guests": "Misafir sayısı",
+      "date": "Tarih",
+      "time": "Saat",
+      "message": "Mesaj",
+      "guest": "misafir",
+      "guestsLabel": "misafir",
+      "namePh": "Adınız",
+      "phonePh": "+994 XX XXX XX XX",
+      "emailPh": "siz@example.com",
+      "messagePh": "Özel gün, diyet, teras tercihi..."
+    },
+    "errors": {
+      "name": "Tam adınızı girin",
+      "phone": "Geçerli telefon numarası girin",
+      "email": "Geçerli e-posta girin",
+      "guests": "Misafir sayısını seçin",
+      "date": "Tarih seçin",
+      "time": "Saat seçin",
+      "message": "Mesaj çok uzun"
+    }
+  },
+  "contact": {
+    "eyebrow": "Ziyaret",
+    "title": "İletişim",
+    "text": "Bakü'nün merkezindeyiz — rezervasyon, etkinlik ve yol tarifi için bize ulaşın.",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "hours": "Çalışma saatleri",
+    "follow": "Bizi takip edin"
+  },
+  "footer": {
+    "tagline": "Bakü'nün kalbinde lüks teras mutfağı — kebap, pilav ve misafirperverlik.",
+    "explore": "Keşfet",
+    "visit": "Ziyaret et",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "skip": "İçeriğe geç",
+    "toggleTheme": "Temayı değiştir",
+    "loading": "Yükleniyor"
+  },
+  "faqItems": [
+    {
+      "q": "Rezervasyon zorunlu mu?",
+      "a": "Akşamlar ve hafta sonları için önerilir, özellikle teras oturma için. Müsaitlik varsa walk-in kabul ederiz."
+    },
+    {
+      "q": "Çalışma saatleriniz nedir?",
+      "a": "Her gün yaklaşık 10:00–01:45 arasındayız. Kahvaltı, öğle ve akşam yemeği sunulur."
+    },
+    {
+      "q": "Vejetaryen seçenekler var mı?",
+      "a": "Evet — yeşillikli ve peynirli kutablar, salatalar, sebze kebabı ve hafif seçenekler mevcuttur."
+    },
+    {
+      "q": "Açık teras var mı?",
+      "a": "Evet. Yazın açık teras, soğuk havalarda camla korunan alanda rahatça oturursunuz."
+    },
+    {
+      "q": "Etkinlik düzenlenebilir mi?",
+      "a": "VIP salon ve davet hizmeti vardır. Özel menü ve dekor için bizimle iletişime geçin."
+    },
+    {
+      "q": "Menü hangi dillerde?",
+      "a": "Menü Azerbaycan, Rusça ve İngilizce sunulur; ekibimiz çok dilli destek verir."
+    }
+  ],
+  "events": [
+    {
+      "title": "Canlı müzik akşamları",
+      "date": "Her Cuma",
+      "time": "20:00",
+      "description": "Milli motifler, tadım menüsü ve teras atmosferi."
+    },
+    {
+      "title": "Şefin Grill Gecesi",
+      "date": "Her Cumartesi",
+      "time": "19:00",
+      "description": "Köz kebapları, karışık grill ve paylaşım sofraları."
+    },
+    {
+      "title": "VIP kutlamalar",
+      "date": "Anlaşmaya göre",
+      "time": "Esnek",
+      "description": "Doğum günü, evlilik teklifi ve kurumsal akşamlar için VIP salon."
+    },
+    {
+      "title": "Pazar brunch",
+      "date": "Her Pazar",
+      "time": "11:00 – 15:00",
+      "description": "Kahvaltı klasikleri, taze meyve suları ve sıcak çay."
+    }
+  ],
+  "awardsList": [
+    {
+      "title": "Misafirlerin seçimi",
+      "year": "2025",
+      "issuer": "TripAdvisor Travellers' Choice",
+      "description": "Hizmet ve mutfakta istikrarlı kalite için."
+    },
+    {
+      "title": "En iyi teras",
+      "year": "2024",
+      "issuer": "Baku Gastronomy Guide",
+      "description": "Açık hava yemek deneyimi için seçilmiş adres."
+    },
+    {
+      "title": "4.6★ Google",
+      "year": "2026",
+      "issuer": "Google Reviews",
+      "description": "Binlerce yorum — lezzet, atmosfer ve konum."
+    },
+    {
+      "title": "Miras mutfağı",
+      "year": "2023",
+      "issuer": "Azerbaycan Mutfak Derneği",
+      "description": "Milli tariflerin çağdaş sunumu."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Bakü'deki en lezzetli milli mutfak deneyimlerinden biri — kutab, kekik çayı ve teras.",
+      "author": "Elena M.",
+      "role": "Gezgin, Google"
+    },
+    {
+      "quote": "Temiz, rahat, merkezi konum. Şah pilav ve kebaplar harikaydı; servis özenliydi.",
+      "author": "James K.",
+      "role": "Misafir, Tripadvisor"
+    },
+    {
+      "quote": "Fiyat/performans mükemmel. Araz salatası ve karışık grill — mutlaka denenmeli.",
+      "author": "Aysel R.",
+      "role": "Yerel misafir"
+    }
+  ]
+}

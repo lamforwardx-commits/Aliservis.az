@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Do I need a reservation?",
+      "answer": "Reservations are recommended for evenings and weekends, especially for terrace seating. Walk-ins are welcome based on availability."
+    },
+    {
+      "question": "What are your opening hours?",
+      "answer": "We are open daily from 10:00 to 01:00, serving breakfast, lunch, dinner, and late-night dining."
+    },
+    {
+      "question": "Do you offer vegetarian options?",
+      "answer": "Yes. Our menu includes kutabs with greens and cheese, salads, omelettes, and several vegetable-forward Azerbaijani dishes."
+    },
+    {
+      "question": "Is there outdoor terrace seating?",
+      "answer": "Yes. Araz Terrace features a spacious outdoor terrace in the heart of Baku — perfect for warm evenings and city atmosphere."
+    },
+    {
+      "question": "Can you host private events?",
+      "answer": "Absolutely. We host birthdays, business dinners, and celebrations in our VIP hall and terrace areas. Contact us for tailored packages."
+    },
+    {
+      "question": "Is the menu available in English?",
+      "answer": "Yes. Our menu is available in English, Azerbaijani, and Russian to welcome both locals and international guests."
+    }
+  ]
+}

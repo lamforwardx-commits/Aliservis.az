@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "homeTitle": "Araz Terrace | Bakının lüks restoranı",
+    "homeDescription": "Araz Terrace — Bakının mərkəzində terrasa malik lüks restoran. Azərbaycan mətbəxi, kabablar, Şah plov və isti qonaqpərvərlik.",
+    "aboutTitle": "Haqqımızda",
+    "aboutDescription": "Araz Terrace-ın hekayəsi, terrası və Bakıdakı Azərbaycan mətbəxi ənənəsi.",
+    "menuTitle": "Menyu",
+    "menuDescription": "Kabablar, plovlar, qutablar, salatlar, desertlər və içkilər — Araz Terrace menyusu.",
+    "galleryTitle": "Qalereya",
+    "galleryDescription": "Araz Terrace restoranının interyeri, terrası və mətbəxindən real fotolar.",
+    "eventsTitle": "Tədbirlər",
+    "eventsDescription": "VIP zal, banketlər və xüsusi axşamlar üçün Araz Terrace.",
+    "reservationsTitle": "Rezervasiya",
+    "reservationsDescription": "Araz Terrace-da masa bron edin — terras və VIP oturacaqlar.",
+    "contactTitle": "Əlaqə",
+    "contactDescription": "Ünvan, telefon, iş saatları və xəritə — Araz Terrace, Bakı.",
+    "keywords": "Araz Terrace, Bakı restoran, Azərbaycan mətbəxi, kabab, terras, Şah plov, rezervasiya"
+  },
+  "nav": {
+    "home": "Ana səhifə",
+    "about": "Haqqımızda",
+    "menu": "Menyu",
+    "gallery": "Qalereya",
+    "events": "Tədbirlər",
+    "reservations": "Rezervasiya",
+    "contact": "Əlaqə",
+    "reserve": "Masa bron et",
+    "openMenu": "Menyunu aç",
+    "closeMenu": "Menyunu bağla",
+    "language": "Dil"
+  },
+  "hero": {
+    "eyebrow": "Bakı · İslam Səfərli",
+    "title": "Araz Terrace",
+    "subtitle": "Şəhərin ürəyində lüks terras mətbəxi",
+    "text": "Kömürdə kabablar, Şah plov, təzə qutablar və Bakının axşam işıqları altında zərif atmosfer.",
+    "reserve": "Masa bron et",
+    "menu": "Menyuya bax"
+  },
+  "chef": {
+    "eyebrow": "Mətbəx",
+    "title": "Şefin fəlsəfəsi",
+    "text": "Biz ənənəvi Azərbaycan reseptlərini mövsümi məhsullar və dəqiq texnika ilə birləşdiririk. Hər lövhə — dad, aroma və qonaqpərvərlik balansıdır.",
+    "points": {
+      "p1": "Kömür üstündə bişən kabablar",
+      "p2": "Əl işi plov və dolma ənənəsi",
+      "p3": "Şəffaf, mövsümi məhsullar"
+    }
+  },
+  "popular": {
+    "eyebrow": "Seçilmiş dadlar",
+    "title": "Populyar yeməklər",
+    "text": "Qonaqların ən çox seçdiyi Araz Terrace klassikləri.",
+    "cta": "Tam menyu"
+  },
+  "stats": {
+    "eyebrow": "Rəqəmlərlə",
+    "title": "Bakının seçimi",
+    "rating": "Google reytinqi",
+    "reviews": "Rəy",
+    "dishes": "Menyu mövqeyi",
+    "hours": "Günlük xidmət"
+  },
+  "reviews": {
+    "eyebrow": "Google rəyləri",
+    "title": "Minlərlə qonağın sevgisi",
+    "text": "Təmiz məkan, dadlı milli yeməklər və mərkəzi yer — qonaqların ən çox qeyd etdiyi məqamlar.",
+    "viewMaps": "Google Maps-də bax"
+  },
+  "gallery": {
+    "eyebrow": "Atmosfer",
+    "title": "Qalereya",
+    "text": "Terras, interyer və süfrəmizdən anlar.",
+    "cta": "Bütün qalereya"
+  },
+  "instagram": {
+    "eyebrow": "Sosial",
+    "title": "Instagram",
+    "text": "@arazterrace — süfrə, terras və bayram anları."
+  },
+  "awards": {
+    "eyebrow": "Tanınma",
+    "title": "Mükafatlar və fərqlənmələr"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Tez-tez verilən suallar"
+  },
+  "cta": {
+    "title": "Bu axşam sizin masanız hazırdır",
+    "text": "Terras və ya VIP zal — xüsusi gününüzü Araz Terrace-da keçirin.",
+    "button": "İndi rezervasiya et"
+  },
+  "about": {
+    "eyebrow": "Hekayəmiz",
+    "title": "Bakının toplaşdığı terras",
+    "p1": "Araz Terrace İslam Səfərli küçəsində, Fəvvarələr meydanı və İçərişəhərə yaxın yerdə yerləşir. Yayda açıq terras, qışda isə böyük pəncərələrlə qorunan isti mühit qonaqları qarşılayır.",
+    "p2": "Menyumuzda Lülə kabab, Şah plov, yarpaq dolması, qutablar, düşbərə və Şefin “Araz” salatı kimi milli klassiklər, eləcə də steyk və dəniz məhsulları var.",
+    "features": {
+      "f1": "Yay terrası və mərkəzi yer",
+      "f2": "VIP zal və banketlər",
+      "f3": "Azərbaycan və beynəlxalq menyu",
+      "f4": "Çoxdilli xidmət"
+    }
+  },
+  "menuPage": {
+    "eyebrow": "Mətbəx",
+    "title": "Menyu",
+    "text": "Səhərdən gecəyə — kabablar, plovlar, salatlar və desertlər."
+  },
+  "galleryPage": {
+    "eyebrow": "Vizual hekayə",
+    "title": "Qalereya",
+    "text": "Restoranın real fotoqrafiyası — terras, interyer və süfrə."
+  },
+  "eventsPage": {
+    "eyebrow": "Toplantılar",
+    "title": "Tədbirlər və bayramlar",
+    "text": "Ad günləri, korporativ axşamlar və VIP qonaqlıqlar.",
+    "cta": "Tədbir planlaşdır"
+  },
+  "reservations": {
+    "eyebrow": "Masa bronu",
+    "title": "Rezervasiya",
+    "text": "Axşamlar və həftəsonu üçün əvvəlcədən bron tövsiyə olunur.",
+    "call": "Zəng etmək istəyirsiniz?",
+    "success": "Təşəkkürlər — rezervasiya sorğunuz qəbul olundu. Tezliklə təsdiqləyəcəyik.",
+    "submit": "Rezervasiya göndər",
+    "sending": "Göndərilir...",
+    "fields": {
+      "name": "Ad, soyad",
+      "phone": "Telefon",
+      "email": "E-poçt",
+      "guests": "Qonaq sayı",
+      "date": "Tarix",
+      "time": "Saat",
+      "message": "Mesaj",
+      "guest": "qonaq",
+      "guestsLabel": "qonaq",
+      "namePh": "Adınız",
+      "phonePh": "+994 XX XXX XX XX",
+      "emailPh": "siz@example.com",
+      "messagePh": "Bayram, pəhriz, terras tercihi..."
+    },
+    "errors": {
+      "name": "Tam adınızı daxil edin",
+      "phone": "Düzgün telefon nömrəsi daxil edin",
+      "email": "Düzgün e-poçt daxil edin",
+      "guests": "Qonaq sayını seçin",
+      "date": "Tarix seçin",
+      "time": "Saat seçin",
+      "message": "Mesaj çox uzundur"
+    }
+  },
+  "contact": {
+    "eyebrow": "Ziyarət",
+    "title": "Əlaqə",
+    "text": "Bakının mərkəzindəyik — rezervasiya, tədbir və istiqamət üçün bizimlə əlaqə saxlayın.",
+    "address": "Ünvan",
+    "phone": "Telefon",
+    "email": "E-poçt",
+    "hours": "İş saatları",
+    "follow": "Bizi izləyin"
+  },
+  "footer": {
+    "tagline": "Bakının ürəyində lüks terras mətbəxi — kabab, plov və qonaqpərvərlik.",
+    "explore": "Kəşf et",
+    "visit": "Ziyarət et",
+    "rights": "Bütün hüquqlar qorunur."
+  },
+  "common": {
+    "skip": "Məzmuna keç",
+    "toggleTheme": "Temanı dəyiş",
+    "loading": "Yüklənir"
+  },
+  "faqItems": [
+    {
+      "q": "Rezervasiya mütləqdirmi?",
+      "a": "Axşamlar və həftəsonu üçün tövsiyə olunur, xüsusən terras oturacaqları üçün. Boş yer olduqda walk-in qəbul edirik."
+    },
+    {
+      "q": "İş saatlarınız necədir?",
+      "a": "Hər gün təxminən 10:00–01:45 arası açıǧıq. Səhər yeməyi, nahar və axşam yeməyi təqdim olunur."
+    },
+    {
+      "q": "Vegetarian seçimlər varmı?",
+      "a": "Bəli — göyərtili və pendirli qutablar, salatlar, tərəvəz kababı və digər yüngül seçimlər mövcuddur."
+    },
+    {
+      "q": "Açıq terras varmı?",
+      "a": "Bəli. Yayda açıq terras, soyuq havada isə pəncərəli qorunan zona ilə rahat oturursunuz."
+    },
+    {
+      "q": "Tədbir keçirmək olar?",
+      "a": "VIP zal və banket xidməti mövcuddur. Xüsusi menyu və dekor üçün bizimlə əlaqə saxlayın."
+    },
+    {
+      "q": "Menyu hansı dillərdədir?",
+      "a": "Menyu Azərbaycan, rus və ingilis dillərində təqdim olunur; komandamız qonaqlara çoxdilli dəstək verir."
+    }
+  ],
+  "events": [
+    {
+      "title": "Canlı musiqi axşamları",
+      "date": "Hər cümə",
+      "time": "20:00",
+      "description": "Milli motivlər, degustasiya menyusu və terras atmosferi."
+    },
+    {
+      "title": "Şefin Grill Gecəsi",
+      "date": "Hər şənbə",
+      "time": "19:00",
+      "description": "Kömür kababları, qarışıq grill və paylaşımlı süfrələr."
+    },
+    {
+      "title": "VIP bayramlar",
+      "date": "Razılaşma ilə",
+      "time": "Çevik",
+      "description": "Ad günü, təklif və korporativ axşamlar üçün VIP zal."
+    },
+    {
+      "title": "Bazar brunch",
+      "date": "Hər bazar",
+      "time": "11:00 – 15:00",
+      "description": "Səhər yeməyi klassikləri, təzə şirələr və isti çay."
+    }
+  ],
+  "awardsList": [
+    {
+      "title": "Qonaqların seçimi",
+      "year": "2025",
+      "issuer": "TripAdvisor Travellers' Choice",
+      "description": "Xidmət və mətbəxdə sabit keyfiyyətə görə."
+    },
+    {
+      "title": "Ən yaxşı terras",
+      "year": "2024",
+      "issuer": "Baku Gastronomy Guide",
+      "description": "Açıq hava yemək təcrübəsi üçün seçilmiş ünvan."
+    },
+    {
+      "title": "4.6★ Google",
+      "year": "2026",
+      "issuer": "Google Reviews",
+      "description": "Minlərlə rəy — dad, atmosfer və yer."
+    },
+    {
+      "title": "İrs mətbəxi",
+      "year": "2023",
+      "issuer": "Azərbaycan Kulinariya Cəmiyyəti",
+      "description": "Milli reseptlərin müasir təqdimatı."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Bakıda ən dadlı milli mətbəx təcrübələrindən biri — qutab, kəklikotu çayı və terras.",
+      "author": "Elena M.",
+      "role": "Səyahətçi, Google"
+    },
+    {
+      "quote": "Təmiz, rahat, mərkəzi yer. Şah plov və kabablar əla idi; xidmət diqqətli idi.",
+      "author": "James K.",
+      "role": "Qonaq, Tripadvisor"
+    },
+    {
+      "quote": "Qiymətə görə əla keyfiyyət. Araz salatı və qarışıq grill — mütləq sınanmalıdır.",
+      "author": "Aysel R.",
+      "role": "Yerli qonaq"
+    }
+  ]
+}

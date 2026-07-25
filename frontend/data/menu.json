@@ -1,0 +1,324 @@
+{
+  "categories": [
+    {
+      "id": "breakfast",
+      "name": { "az": "Səhər yeməyi", "tr": "Kahvaltı" },
+      "description": {
+        "az": "Səhər 10:00–12:00 arası təzə və bol süfrə.",
+        "tr": "Sabah 10:00–12:00 arası taze ve bol sofra."
+      },
+      "items": [
+        {
+          "id": "azeri-breakfast",
+          "title": { "az": "Azərbaycan səhər yeməyi", "tr": "Azerbaycan kahvaltısı" },
+          "description": {
+            "az": "Pendir assorti, göyərti, yumurta, zeytun, bal, kərə yağı və isti çörək.",
+            "tr": "Peynir çeşitleri, yeşillik, yumurta, zeytin, bal, tereyağı ve sıcak ekmek."
+          },
+          "price": 28,
+          "image": "/images/menu/food-breakfast.webp",
+          "featured": true,
+          "chefPick": true
+        },
+        {
+          "id": "kuku",
+          "title": { "az": "Kükü", "tr": "Kükü" },
+          "description": {
+            "az": "Yumurta və göyərti ilə bişmiş ənənəvi kükü.",
+            "tr": "Yumurta ve yeşillikle pişmiş geleneksel kükü."
+          },
+          "price": 10,
+          "image": "/images/menu/food-salad.webp"
+        }
+      ]
+    },
+    {
+      "id": "azerbaijani",
+      "name": { "az": "Azərbaycan mətbəxi", "tr": "Azerbaycan mutfağı" },
+      "description": {
+        "az": "Milli reseptlər — plov, dolma, qazan yeməkləri.",
+        "tr": "Milli tarifler — pilav, dolma, kazan yemekleri."
+      },
+      "items": [
+        {
+          "id": "shah-plov",
+          "title": { "az": "Şah Plov", "tr": "Şah Pilav" },
+          "description": {
+            "az": "Quzu əti, qaysı, xurma, qoz, albuxara, şabalıd və kişmişlə lavaşda möhürlənmiş düyü.",
+            "tr": "Kuzu eti, kayısı, hurma, ceviz, kuru erik, kestane ve kuşüzümüyle lavaşta mühürlenmiş pilav."
+          },
+          "price": 65,
+          "image": "/images/menu/food-plov.webp",
+          "featured": true,
+          "chefPick": true
+        },
+        {
+          "id": "yarpaq-dolma",
+          "title": { "az": "Yarpaq dolması", "tr": "Yaprak dolması" },
+          "description": {
+            "az": "Üzüm yarpağında quzu/mal əti və göyərti — süzmə ilə.",
+            "tr": "Asma yaprağında kuzu/dana eti ve yeşillik — süzme ile."
+          },
+          "price": 14,
+          "image": "/images/menu/food-dolma.webp",
+          "featured": true
+        },
+        {
+          "id": "sheki-piti",
+          "title": { "az": "Şəki pitisi", "tr": "Şeki piti" },
+          "description": {
+            "az": "Gil qabda bişmiş quzu və noxud şorbası.",
+            "tr": "Toprak kapta pişmiş kuzu ve nohut çorbası."
+          },
+          "price": 20,
+          "image": "/images/menu/food-plov.webp"
+        },
+        {
+          "id": "dushbara",
+          "title": { "az": "Düşbərə", "tr": "Düşbere" },
+          "description": {
+            "az": "Mal və quzu ətindən xırda dumplinqlər, nanəli bulyonda.",
+            "tr": "Dana ve kuzu etinden küçük dumplings, naneli bulyonda."
+          },
+          "price": 9,
+          "image": "/images/menu/food-qutab.webp"
+        }
+      ]
+    },
+    {
+      "id": "kebabs",
+      "name": { "az": "Kabablar", "tr": "Kebaplar" },
+      "description": {
+        "az": "Kömür manqalında bişən klassik kabablar.",
+        "tr": "Köz mangalında pişen klasik kebaplar."
+      },
+      "items": [
+        {
+          "id": "lyulya",
+          "title": { "az": "Lülə kabab", "tr": "Lüle kebap" },
+          "description": {
+            "az": "Əl ilə yoğrulmuş qoyun əti — lavaş və sumaq ilə.",
+            "tr": "El ile yoğrulmuş koyun eti — lavaş ve sumak ile."
+          },
+          "price": 13,
+          "image": "/images/menu/food-kebab.webp",
+          "featured": true,
+          "chefPick": true
+        },
+        {
+          "id": "tika",
+          "title": { "az": "Tikə kabab", "tr": "Tike kebap" },
+          "description": {
+            "az": "Marinə olunmuş quzu tikələri, soğan salatı ilə.",
+            "tr": "Marine edilmiş kuzu parçaları, soğan salatasıyla."
+          },
+          "price": 14,
+          "image": "/images/menu/food-kebab.webp",
+          "featured": true
+        },
+        {
+          "id": "antrikot-kebab",
+          "title": { "az": "Antrikot kabab", "tr": "Antrikot kebap" },
+          "description": {
+            "az": "Şirəli antrikot şişləri kömür dadı ilə.",
+            "tr": "Sulu antrikot şişleri köz tadıyla."
+          },
+          "price": 15,
+          "image": "/images/menu/food-steak.webp"
+        },
+        {
+          "id": "grand-lyulya",
+          "title": { "az": "Grand Lülə", "tr": "Grand Lüle" },
+          "description": {
+            "az": "Qoyun və toyuq əti, düyü, badımcan və tərəvəzlərlə paylaşımlı set.",
+            "tr": "Koyun ve tavuk eti, pilav, patlıcan ve sebzelerle paylaşım seti."
+          },
+          "price": 34,
+          "image": "/images/menu/food-kebab.webp",
+          "featured": true
+        }
+      ]
+    },
+    {
+      "id": "steaks",
+      "name": { "az": "Steyklər", "tr": "Biftekler" },
+      "description": {
+        "az": "Premium ət kəsimləri — steyk və antrikot.",
+        "tr": "Premium et kesimleri — biftek ve antrikot."
+      },
+      "items": [
+        {
+          "id": "lamb-antrikot",
+          "title": { "az": "Quzu antrikotları nar sousunda", "tr": "Kuzu antrikot nar sosunda" },
+          "description": {
+            "az": "Quzu antrikot, şabalıd, nar və nar turşusu.",
+            "tr": "Kuzu antrikot, kestane, nar ve nar ekşisi."
+          },
+          "price": 27,
+          "image": "/images/menu/food-steak.webp",
+          "chefPick": true
+        },
+        {
+          "id": "wine-beef",
+          "title": { "az": "Çaxırda dana", "tr": "Şarapta dana" },
+          "description": {
+            "az": "Dana əti qırmızı çaxır sousunda.",
+            "tr": "Dana eti kırmızı şarap sosunda."
+          },
+          "price": 32,
+          "image": "/images/menu/food-steak.webp",
+          "featured": true
+        }
+      ]
+    },
+    {
+      "id": "seafood",
+      "name": { "az": "Dəniz məhsulları", "tr": "Deniz ürünleri" },
+      "description": {
+        "az": "Təzə balıq və dəniz məhsulları.",
+        "tr": "Taze balık ve deniz ürünleri."
+      },
+      "items": [
+        {
+          "id": "grilled-salmon",
+          "title": { "az": "Qızardılmış qızıl balıq", "tr": "Izgara somon" },
+          "description": {
+            "az": "Qızıl balıq pomidor, badımcan və rəngli bibərlə.",
+            "tr": "Somon; domates, patlıcan ve renkli biberle."
+          },
+          "price": 40,
+          "image": "/images/menu/food-salad.webp",
+          "chefPick": true,
+          "featured": true
+        },
+        {
+          "id": "prawns-honey",
+          "title": { "az": "Krevetka ballı xardal sousunda", "tr": "Ballı hardal sosunda karides" },
+          "description": {
+            "az": "Krevetka, ağ çaxır, ballı xardal, cəfəri və sarımsaq.",
+            "tr": "Karides, beyaz şarap, ballı hardal, maydanoz ve sarımsak."
+          },
+          "price": 32,
+          "image": "/images/gallery/gallery-2.webp"
+        }
+      ]
+    },
+    {
+      "id": "hot-starters",
+      "name": { "az": "İsti qəlyanaltılar", "tr": "Sıcak mezeler" },
+      "description": {
+        "az": "Qutablar və isti başlanğıclar.",
+        "tr": "Kutablar ve sıcak başlangıçlar."
+      },
+      "items": [
+        {
+          "id": "qutab-greens",
+          "title": { "az": "Göyərtili qutab (4 ədəd)", "tr": "Yeşillikli kutab (4 adet)" },
+          "description": {
+            "az": "İncə xəmir, təzə göyərti — sumaq ilə.",
+            "tr": "İnce hamur, taze yeşillik — sumak ile."
+          },
+          "price": 12,
+          "image": "/images/menu/food-qutab.webp",
+          "featured": true
+        },
+        {
+          "id": "qutab-meat",
+          "title": { "az": "Ətli qutab (4 ədəd)", "tr": "Etli kutab (4 adet)" },
+          "description": {
+            "az": "Ətli doldurma ilə isti qutablar.",
+            "tr": "Etli iç harçla sıcak kutablar."
+          },
+          "price": 13,
+          "image": "/images/menu/food-qutab.webp"
+        },
+        {
+          "id": "araz-salad",
+          "title": { "az": "Şefdən özəl “Araz” salatı", "tr": "Şefin özel “Araz” salatası" },
+          "description": {
+            "az": "Pomidor, kus-kus, xiyar, qoz, rukola, nar və süzməli sous.",
+            "tr": "Domates, kuskus, salatalık, ceviz, roka, nar ve süzmeli sos."
+          },
+          "price": 18,
+          "image": "/images/menu/food-salad.webp",
+          "featured": true,
+          "chefPick": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": { "az": "Desertlər", "tr": "Tatlılar" },
+      "description": {
+        "az": "Şirin son — milli və müasir desertlər.",
+        "tr": "Tatlı final — milli ve çağdaş tatlılar."
+      },
+      "items": [
+        {
+          "id": "pakhlava",
+          "title": { "az": "Qozlu paxlava", "tr": "Cevizli baklava" },
+          "description": {
+            "az": "Qat-qat xəmir, qoz və zəfəran şərbəti.",
+            "tr": "Katmanlı hamur, ceviz ve safran şerbeti."
+          },
+          "price": 14,
+          "image": "/images/menu/food-dessert.webp",
+          "featured": true
+        },
+        {
+          "id": "honey-cake",
+          "title": { "az": "Bal tortu", "tr": "Bal keki" },
+          "description": {
+            "az": "Yumşaq qatlı bal tortu, krem ilə.",
+            "tr": "Yumuşak katmanlı bal keki, kremayla."
+          },
+          "price": 16,
+          "image": "/images/menu/food-dessert.webp",
+          "chefPick": true
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": { "az": "İçkilər", "tr": "İçecekler" },
+      "description": {
+        "az": "Təbii şirələr, limonadlar və imza kokteyllər.",
+        "tr": "Doğal meyve suları, limonatalar ve imza kokteyller."
+      },
+      "items": [
+        {
+          "id": "pomegranate",
+          "title": { "az": "Nar şirəsi", "tr": "Nar suyu" },
+          "description": {
+            "az": "Gündəlik sıxılmış Azərbaycan narı.",
+            "tr": "Günlük sıkılmış Azerbaycan narı."
+          },
+          "price": 10,
+          "image": "/images/gallery/gallery-5.webp",
+          "featured": true
+        },
+        {
+          "id": "araz-sour",
+          "title": { "az": "Araz Sour", "tr": "Araz Sour" },
+          "description": {
+            "az": "Restoranın imza kokteyli.",
+            "tr": "Restoranın imza kokteyli."
+          },
+          "price": 11,
+          "image": "/images/gallery/gallery-6.webp",
+          "chefPick": true
+        },
+        {
+          "id": "lemonade",
+          "title": { "az": "Xüsusi limonad", "tr": "Özel limonata" },
+          "description": {
+            "az": "Ev üsulu təzə limonad.",
+            "tr": "Ev yapımı taze limonata."
+          },
+          "price": 20,
+          "image": "/images/gallery/gallery-7.webp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "awards": [
+    {
+      "id": "a1",
+      "title": "Guests' Choice",
+      "year": "2025",
+      "issuer": "TripAdvisor Travellers' Choice",
+      "description": "Recognized for consistent excellence in hospitality and cuisine."
+    },
+    {
+      "id": "a2",
+      "title": "Top Terrace Dining",
+      "year": "2024",
+      "issuer": "Baku Gastronomy Guide",
+      "description": "Highlighted among the city's finest open-air dining experiences."
+    },
+    {
+      "id": "a3",
+      "title": "4.6★ Google Rating",
+      "year": "2026",
+      "issuer": "Google Reviews",
+      "description": "Thousands of guest reviews celebrating flavor, atmosphere, and location."
+    },
+    {
+      "id": "a4",
+      "title": "Heritage Cuisine Award",
+      "year": "2023",
+      "issuer": "Azerbaijan Culinary Society",
+      "description": "Honored for elevating traditional recipes with refined presentation."
+    }
+  ]
+}

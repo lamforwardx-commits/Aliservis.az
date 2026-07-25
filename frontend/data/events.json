@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "id": "e1",
+      "title": "Live Mugham Evenings",
+      "date": "Every Friday",
+      "time": "20:00",
+      "description": "An intimate night of traditional Azerbaijani music paired with tasting menus and terrace seating.",
+      "image": "/images/gallery/terrace-evening.svg"
+    },
+    {
+      "id": "e2",
+      "title": "Chef's Grill Night",
+      "date": "Every Saturday",
+      "time": "19:00",
+      "description": "Charcoal specialties, mixed grills, and signature sauces prepared live for sharing tables.",
+      "image": "/images/gallery/grill-fire.svg"
+    },
+    {
+      "id": "e3",
+      "title": "Private Celebrations",
+      "date": "By arrangement",
+      "time": "Flexible",
+      "description": "Birthdays, proposals, and corporate dinners in our VIP hall with custom menus and décor.",
+      "image": "/images/gallery/vip-hall.svg"
+    },
+    {
+      "id": "e4",
+      "title": "Sunday Brunch Ritual",
+      "date": "Every Sunday",
+      "time": "11:00 – 15:00",
+      "description": "A leisurely brunch featuring Azerbaijani breakfast classics, fresh juices, and pastry selections.",
+      "image": "/images/gallery/breakfast.svg"
+    }
+  ]
+}

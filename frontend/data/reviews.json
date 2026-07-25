@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "rating": 4.6,
+    "count": 2981,
+    "source": "Google"
+  },
+  "reviews": [
+    {
+      "id": "r1",
+      "author": "Elena M.",
+      "rating": 5,
+      "date": "2026-05-12",
+      "text": "We came almost every evening during our stay in Baku. Fresh food, warm service, and a terrace that feels protected from the square noise — truly excellent.",
+      "source": "Google"
+    },
+    {
+      "id": "r2",
+      "author": "James K.",
+      "rating": 5,
+      "date": "2026-04-03",
+      "text": "Best introduction to Azerbaijani cuisine. The kutabs, thyme tea, and tomato salad were unforgettable. Clean, cozy, and beautifully located.",
+      "source": "Google"
+    },
+    {
+      "id": "r3",
+      "author": "Aysel R.",
+      "rating": 5,
+      "date": "2026-03-18",
+      "text": "Delicious food with fair prices and polite staff. The mixed grill and plov are must-orders. Perfect for guests visiting Baku.",
+      "source": "Google"
+    },
+    {
+      "id": "r4",
+      "author": "Marco D.",
+      "rating": 4,
+      "date": "2026-02-27",
+      "text": "Central location, elegant interior, and a large terrace. Service was attentive and the national dishes were the highlight of our trip.",
+      "source": "Google"
+    },
+    {
+      "id": "r5",
+      "author": "Nina S.",
+      "rating": 5,
+      "date": "2026-01-09",
+      "text": "Breakfast was outstanding — generous platter, excellent tea, and a calm morning atmosphere. Highly recommend reserving a terrace table.",
+      "source": "Google"
+    },
+    {
+      "id": "r6",
+      "author": "Orkhan H.",
+      "rating": 5,
+      "date": "2025-12-20",
+      "text": "Stylish setting with carpets, soft lighting, and live-feeling hospitality. Ideal for family dinners and celebrations.",
+      "source": "Google"
+    }
+  ]
+}

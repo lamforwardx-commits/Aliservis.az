@@ -1,0 +1,23 @@
+{
+  "name": "Araz Terrace",
+  "short_name": "Araz Terrace",
+  "description": "Luxury terrace dining in the heart of Baku",
+  "start_url": "/az",
+  "display": "standalone",
+  "background_color": "#070707",
+  "theme_color": "#070707",
+  "lang": "az",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}

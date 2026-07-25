@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://arazterrace.az/az</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://arazterrace.az/az"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://arazterrace.az/tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arazterrace.az/az"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://arazterrace.az/tr</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://arazterrace.az/az"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://arazterrace.az/tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arazterrace.az/az"/>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://arazterrace.az/az/menu</loc><priority>0.9</priority></url>
+  <url><loc>https://arazterrace.az/tr/menu</loc><priority>0.9</priority></url>
+  <url><loc>https://arazterrace.az/az/about</loc><priority>0.8</priority></url>
+  <url><loc>https://arazterrace.az/tr/about</loc><priority>0.8</priority></url>
+  <url><loc>https://arazterrace.az/az/gallery</loc><priority>0.7</priority></url>
+  <url><loc>https://arazterrace.az/tr/gallery</loc><priority>0.7</priority></url>
+  <url><loc>https://arazterrace.az/az/events</loc><priority>0.7</priority></url>
+  <url><loc>https://arazterrace.az/tr/events</loc><priority>0.7</priority></url>
+  <url><loc>https://arazterrace.az/az/reservations</loc><priority>0.9</priority></url>
+  <url><loc>https://arazterrace.az/tr/reservations</loc><priority>0.9</priority></url>
+  <url><loc>https://arazterrace.az/az/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://arazterrace.az/tr/contact</loc><priority>0.8</priority></url>
+</urlset>
